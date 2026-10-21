@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="light dark" />
     <meta name="description" id="metaDesc" content="Private 1-on-1 piano lessons for adults and children. Online lessons $25/hour, in-person lessons $35/hour. Book your lesson today." />
     <link rel="icon" href="data:," />
-    <title>Piano Lessons — Online $25/hr · In-Person $35/hr</title>
+    <title>Phinaccords Academy — Online $25/hr · In-Person $35/hr</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
@@ -278,6 +278,8 @@
       .seg button .sub { display: block; font-size: 0.79rem; font-weight: 500; color: var(--ink-faint); margin-top: 1px; }
       .seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); border-color: var(--line); box-shadow: 0 3px 10px -4px rgba(18, 44, 34, 0.4); }
       .seg button[aria-pressed="true"] .sub { color: var(--accent); }
+      .seg.seg-3 { grid-template-columns: repeat(3, 1fr); }
+      @media (max-width: 560px) { .seg.seg-3 { grid-template-columns: 1fr; } }
       .hours-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
       .stepper { display: inline-flex; align-items: center; gap: 4px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; padding: 4px; }
       .stepper button { width: 44px; height: 44px; border-radius: 50%; border: none; background: var(--surface); font-size: 1.25rem; font-weight: 700; cursor: pointer; color: var(--ink); box-shadow: 0 2px 6px -2px rgba(18,44,34,.35); }
@@ -333,7 +335,7 @@
             <span class="keys" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="3" width="19" height="18" rx="2.5" fill="#fff6ee"/><rect x="6" y="3" width="3" height="10" fill="#173e31"/><rect x="10.5" y="3" width="3" height="10" fill="#173e31"/><rect x="15" y="3" width="3" height="10" fill="#173e31"/></svg>
             </span>
-            <span data-i18n="brand">Piano&nbsp;Lessons</span>
+            <span data-i18n="brand">Phinaccords&nbsp;Academy</span>
           </a>
           <nav class="links" aria-label="Main" data-i18n-aria="navMain">
             <a href="#lessons" data-i18n="navLessons">Lessons</a>
@@ -507,17 +509,17 @@
               <a class="btn" href="#book" data-book data-format="inperson" data-i18n="pInBtn">Book In-Person — $35/hr</a>
             </article>
             <article class="p-card">
-              <h3 data-i18n="pPackTitle">Lesson Pack</h3>
-              <p class="who" data-i18n="pPackWho">4 lessons · for adults &amp; children</p>
-              <p class="p-price"><span class="amount" data-i18n="amt100">$100</span><span class="per" data-i18n="pPackPer">online</span></p>
-              <p class="p-alt" data-i18n-html="pPackAlt">In-person pack: <strong>$140</strong> for 4 lessons. Same hourly rates — just book ahead and stay consistent.</p>
+              <h3 data-i18n="pGroupTitle">Group Package</h3>
+              <p class="who" data-i18n="pGroupWho">Up to 5 people · adults &amp; children</p>
+              <p class="p-price"><span class="amount" style="font-size:1.8rem;line-height:1.15" data-i18n="pGroupPrice">Flat group rate</span></p>
+              <p class="p-alt" data-i18n="pGroupAlt">One flat package price for the whole group — not per hour. The price is confirmed with the teacher when you book.</p>
               <ul>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span data-i18n="pp1">4 one-hour lessons, use them weekly</span></li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span data-i18n="pp2">Online $100 · In-person $140</span></li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span data-i18n="pp3">Steady progress with a set routine</span></li>
-                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span data-i18n="pp4">Great for ongoing students and gifts</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span data-i18n="pg1">Group piano lessons for up to 5 people</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span data-i18n="pg2">Adults and children welcome together</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span data-i18n="pg3">Online or in person — your choice</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span data-i18n="pg4">Perfect for families, friends, and siblings</span></li>
               </ul>
-              <a class="btn ghost" href="#book" data-book data-hours="4" data-i18n="pPackBtn">Book a Pack</a>
+              <a class="btn ghost" href="#book" data-book data-format="group" data-i18n="pGroupBtn">Book the Group Package</a>
             </article>
           </div>
         </div>
@@ -555,9 +557,10 @@
               </div>
               <div class="field">
                 <span class="flabel" id="formatLabel" data-i18n="fFormatQ">Lesson format</span>
-                <div class="seg" role="group" aria-labelledby="formatLabel" id="formatSeg">
+                <div class="seg seg-3" role="group" aria-labelledby="formatLabel" id="formatSeg">
                   <button type="button" data-value="online" aria-pressed="true"><span data-i18n="segOnline">Online</span><span class="sub" data-i18n="segOnlineSub">$25 per hour</span></button>
                   <button type="button" data-value="inperson" aria-pressed="false"><span data-i18n="segInperson">In-Person</span><span class="sub" data-i18n="segInpersonSub">$35 per hour</span></button>
+                  <button type="button" data-value="group" aria-pressed="false"><span data-i18n="segGroup">Group Package</span><span class="sub" data-i18n="segGroupSub">Up to 5 people · flat rate</span></button>
                 </div>
               </div>
               <div class="row2">
@@ -570,7 +573,7 @@
                   <input type="time" id="bkTime" name="time" value="16:00" />
                 </div>
               </div>
-              <div class="field">
+              <div class="field" id="hoursField">
                 <span class="flabel" data-i18n="fHoursQ">How many hours?</span>
                 <div class="hours-row">
                   <div class="stepper">
@@ -621,7 +624,7 @@
               <span class="keys" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="3" width="19" height="18" rx="2.5" fill="#fff6ee"/><rect x="6" y="3" width="3" height="10" fill="#173e31"/><rect x="10.5" y="3" width="3" height="10" fill="#173e31"/><rect x="15" y="3" width="3" height="10" fill="#173e31"/></svg>
               </span>
-              <span data-i18n="brand">Piano&nbsp;Lessons</span>
+              <span data-i18n="brand">Phinaccords&nbsp;Academy</span>
             </a>
             <p data-i18n="footBlurb">Private 1-on-1 piano lessons for adults and children — online and in person, at a pace that fits your life.</p>
           </div>
@@ -634,7 +637,7 @@
             <h4 data-i18n="navPricing">Pricing</h4>
             <a href="#pricing" data-i18n="footOnline">Online — $25/hour</a>
             <a href="#pricing" data-i18n="footInperson">In-Person — $35/hour</a>
-            <a href="#pricing" data-i18n="footPack">Lesson Pack — 4 lessons</a>
+            <a href="#pricing" data-i18n="footGroup">Group Package — up to 5 people</a>
             <a href="#book" data-i18n="bookLesson">Book a Lesson</a>
           </div>
           <div class="col">
@@ -644,7 +647,7 @@
           </div>
         </div>
         <div class="foot-bottom">
-          <span data-i18n="footRights">© 2026 Piano Lessons. All rights reserved.</span>
+          <span data-i18n="footRights">© 2026 Phinaccords Academy. All rights reserved.</span>
           <span data-i18n="footRates">Online $25/hr · In-person $35/hr</span>
         </div>
       </div>
@@ -655,9 +658,9 @@
         /* ---------- i18n: English / Français ---------- */
         var I18N = {
           en: {
-            docTitle: "Piano Lessons — Online $25/hr · In-Person $35/hr",
+            docTitle: "Phinaccords Academy — Online $25/hr · In-Person $35/hr",
             docDesc: "Private 1-on-1 piano lessons for adults and children. Online lessons $25/hour, in-person lessons $35/hour. Book your lesson today.",
-            brand: "Piano Lessons",
+            brand: "Phinaccords Academy",
             navMain: "Main", navMobile: "Mobile",
             navLessons: "Lessons", navPricing: "Pricing",
             bookLesson: "Book a Lesson", langLabel: "Language",
@@ -690,9 +693,9 @@
             proof3T: "1-on-1 Attention", proof3D: "Every lesson is private and built entirely around you",
             proof4T: "All Levels Welcome", proof4D: "Complete beginners through advancing students",
             priceKicker: "Pricing", priceTitle: "Simple, Honest Pricing",
-            priceLede: "One simple hourly rate — the same for adults and for children. No sign-up fees, no contracts. Pay per lesson, or grab a pack and keep the momentum going.",
+            priceLede: "One simple hourly rate — the same for adults and for children. No sign-up fees, no contracts. Pay per lesson, or learn together with the group package for up to 5 people.",
             pOnlineTitle: "Online Lessons", pOnlineWho: "For adults & children · by video call",
-            amt25: "$25", amt35: "$35", amt100: "$100", perHour: "/ hour",
+            amt25: "$25", amt35: "$35", perHour: "/ hour",
             pOnlineAlt: "Learn from anywhere — all you need is a piano or keyboard and an internet connection.",
             po1: "Private 1-on-1 lesson by video call",
             po2: "Personalized practice plan after each lesson",
@@ -707,15 +710,16 @@
             pi3: "Personalized practice plan after each lesson",
             pi4: "Same rate for adults and children",
             pInBtn: "Book In-Person — $35/hr",
-            pPackTitle: "Lesson Pack", pPackWho: "4 lessons · for adults & children", pPackPer: "online",
-            pPackAlt: "In-person pack: <strong>$140</strong> for 4 lessons. Same hourly rates — just book ahead and stay consistent.",
-            pp1: "4 one-hour lessons, use them weekly",
-            pp2: "Online $100 · In-person $140",
-            pp3: "Steady progress with a set routine",
-            pp4: "Great for ongoing students and gifts",
-            pPackBtn: "Book a Pack",
+            pGroupTitle: "Group Package", pGroupWho: "Up to 5 people · adults & children",
+            pGroupPrice: "Flat group rate",
+            pGroupAlt: "One flat package price for the whole group — not per hour. The price is confirmed with the teacher when you book.",
+            pg1: "Group piano lessons for up to 5 people",
+            pg2: "Adults and children welcome together",
+            pg3: "Online or in person — your choice",
+            pg4: "Perfect for families, friends, and siblings",
+            pGroupBtn: "Book the Group Package",
             bookKicker: "Book a Lesson", bookTitle: "Book Your Lesson",
-            bookLede: "Pick who the lesson is for, choose online or in person, and set your date and time. Your total is calculated instantly — $25/hour online, $35/hour in person — and your booking goes straight to your teacher.",
+            bookLede: "Pick who the lesson is for, choose online, in person, or the group package, and set your date and time. Individual totals are calculated instantly — $25/hour online, $35/hour in person — and group bookings are confirmed at a flat rate with your teacher.",
             formTitle: "Tell me about your lesson",
             formIntro: "Fill this in, then send your booking straight to your teacher.",
             fName: "Your name", fNamePh: "e.g. Jordan Smith",
@@ -738,13 +742,22 @@
             sendBtnText: "Send Booking",
             confirmPrefer: "Once sent, your teacher will confirm your lesson time shortly.",
             bookAnotherBtn: "Book another lesson",
+            segGroup: "Group Package", segGroupSub: "Up to 5 people · flat rate",
+            formatGroup: "Group Package",
+            sumGroupRate: "Flat rate — to be confirmed",
+            sumGroupHours: "Not per hour",
+            sumGroupTotal: "To be confirmed",
+            ctGroupTemplate: "Thank you, {name}! Your group package booking for up to 5 people is ready to send.",
+            cGroupL: "Group:", cGroupVal: "Up to 5 people · flat rate, not per hour",
+            mailGroupL: "Group: ", mailGroupPeople: "Up to 5 people",
+            mailGroupRate: "Flat group rate (not per hour) — price to be confirmed with the teacher",
             footBlurb: "Private 1-on-1 piano lessons for adults and children — online and in person, at a pace that fits your life.",
             footExplore: "Explore",
-            footOnline: "Online — $25/hour", footInperson: "In-Person — $35/hour", footPack: "Lesson Pack — 4 lessons",
+            footOnline: "Online — $25/hour", footInperson: "In-Person — $35/hour", footGroup: "Group Package — up to 5 people",
             footContact: "Contact & bookings",
             footBook: "Book a lesson using the form above",
             footLines: "For adults &amp; children<br />All levels welcome<br />Online &amp; in-person<br />Flexible scheduling",
-            footRights: "© 2026 Piano Lessons. All rights reserved.",
+            footRights: "© 2026 Phinaccords Academy. All rights reserved.",
             footRates: "Online $25/hr · In-person $35/hr",
             studentAdult: "Adult", studentChild: "Child",
             formatOnline: "Online", formatInperson: "In-Person",
@@ -761,9 +774,9 @@
             mailNotesPrefix: "Notes from student: "
           },
           fr: {
-            docTitle: "Leçons de piano — En ligne 25 $/h · En personne 35 $/h",
+            docTitle: "Phinaccords Academy — En ligne 25 $/h · En personne 35 $/h",
             docDesc: "Leçons de piano privées individuelles pour adultes et enfants. Leçons en ligne 25 $/heure, en personne 35 $/heure. Réservez votre leçon dès aujourd'hui.",
-            brand: "Leçons de piano",
+            brand: "Phinaccords Academy",
             navMain: "Navigation principale", navMobile: "Navigation mobile",
             navLessons: "Leçons", navPricing: "Tarifs",
             bookLesson: "Réserver une leçon", langLabel: "Langue",
@@ -796,9 +809,9 @@
             proof3T: "Attention individuelle", proof3D: "Chaque leçon est privée et entièrement conçue pour vous",
             proof4T: "Tous les niveaux bienvenus", proof4D: "Des débutants complets aux élèves avancés",
             priceKicker: "Tarifs", priceTitle: "Des tarifs simples et honnêtes",
-            priceLede: "Un seul tarif horaire simple — le même pour les adultes et pour les enfants. Aucuns frais d'inscription, aucun contrat. Payez à la leçon, ou prenez un forfait pour garder le rythme.",
+            priceLede: "Un seul tarif horaire simple — le même pour les adultes et pour les enfants. Aucuns frais d'inscription, aucun contrat. Payez à la leçon, ou apprenez ensemble avec le forfait de groupe pour jusqu'à 5 personnes.",
             pOnlineTitle: "Leçons en ligne", pOnlineWho: "Pour adultes et enfants · par appel vidéo",
-            amt25: "25 $", amt35: "35 $", amt100: "100 $", perHour: "/ heure",
+            amt25: "25 $", amt35: "35 $", perHour: "/ heure",
             pOnlineAlt: "Apprenez de n'importe où — il vous suffit d'un piano ou d'un clavier et d'une connexion Internet.",
             po1: "Leçon privée individuelle par appel vidéo",
             po2: "Plan de pratique personnalisé après chaque leçon",
@@ -813,15 +826,16 @@
             pi3: "Plan de pratique personnalisé après chaque leçon",
             pi4: "Même tarif pour les adultes et les enfants",
             pInBtn: "Réserver en personne — 35 $/h",
-            pPackTitle: "Forfait 4 leçons", pPackWho: "4 leçons · pour adultes et enfants", pPackPer: "en ligne",
-            pPackAlt: "Forfait en personne : <strong>140 $</strong> pour 4 leçons. Mêmes tarifs horaires — réservez simplement à l'avance pour garder le rythme.",
-            pp1: "4 leçons d'une heure, à utiliser chaque semaine",
-            pp2: "En ligne 100 $ · En personne 140 $",
-            pp3: "Des progrès constants grâce à une routine régulière",
-            pp4: "Idéal pour les élèves réguliers et comme cadeau",
-            pPackBtn: "Réserver un forfait",
+            pGroupTitle: "Forfait de groupe", pGroupWho: "Jusqu'à 5 personnes · adultes et enfants",
+            pGroupPrice: "Tarif de groupe forfaitaire",
+            pGroupAlt: "Un prix forfaitaire unique pour tout le groupe — pas à l'heure. Le prix est confirmé avec le professeur lors de la réservation.",
+            pg1: "Leçons de piano en groupe pour jusqu'à 5 personnes",
+            pg2: "Adultes et enfants bienvenus ensemble",
+            pg3: "En ligne ou en personne — à votre choix",
+            pg4: "Parfait pour les familles, les amis et les fratries",
+            pGroupBtn: "Réserver le forfait de groupe",
             bookKicker: "Réserver une leçon", bookTitle: "Réservez votre leçon",
-            bookLede: "Choisissez pour qui est la leçon, en ligne ou en personne, puis la date et l'heure. Votre total est calculé instantanément — 25 $/heure en ligne, 35 $/heure en personne — et votre réservation est envoyée directement à votre professeur.",
+            bookLede: "Choisissez pour qui est la leçon, en ligne, en personne ou le forfait de groupe, puis la date et l'heure. Les totaux individuels sont calculés instantanément — 25 $/heure en ligne, 35 $/heure en personne — et les réservations de groupe sont confirmées à un tarif forfaitaire avec votre professeur.",
             formTitle: "Parlez-moi de votre leçon",
             formIntro: "Remplissez ce formulaire, puis envoyez votre réservation directement à votre professeur.",
             fName: "Votre nom", fNamePh: "p. ex. Jordan Smith",
@@ -844,13 +858,22 @@
             sendBtnText: "Envoyer la réservation",
             confirmPrefer: "Une fois envoyée, votre professeur confirmera l'heure de votre leçon sous peu.",
             bookAnotherBtn: "Réserver une autre leçon",
+            segGroup: "Forfait de groupe", segGroupSub: "Jusqu'à 5 personnes · tarif forfaitaire",
+            formatGroup: "Forfait de groupe",
+            sumGroupRate: "Tarif forfaitaire — à confirmer",
+            sumGroupHours: "Pas à l'heure",
+            sumGroupTotal: "À confirmer",
+            ctGroupTemplate: "Merci, {name}! Votre réservation du forfait de groupe pour jusqu'à 5 personnes est prête à être envoyée.",
+            cGroupL: "Groupe :", cGroupVal: "Jusqu'à 5 personnes · tarif forfaitaire, pas à l'heure",
+            mailGroupL: "Groupe : ", mailGroupPeople: "Jusqu'à 5 personnes",
+            mailGroupRate: "Tarif de groupe forfaitaire (pas à l'heure) — prix à confirmer avec le professeur",
             footBlurb: "Leçons de piano privées individuelles pour adultes et enfants — en ligne et en personne, à un rythme qui s'adapte à votre vie.",
             footExplore: "Explorer",
-            footOnline: "En ligne — 25 $/heure", footInperson: "En personne — 35 $/heure", footPack: "Forfait — 4 leçons",
+            footOnline: "En ligne — 25 $/heure", footInperson: "En personne — 35 $/heure", footGroup: "Forfait de groupe — jusqu'à 5 personnes",
             footContact: "Contact et réservations",
             footBook: "Réservez une leçon avec le formulaire ci-dessus",
             footLines: "Pour adultes et enfants<br />Tous les niveaux bienvenus<br />En ligne et en personne<br />Horaire flexible",
-            footRights: "© 2026 Leçons de piano. Tous droits réservés.",
+            footRights: "© 2026 Phinaccords Academy. Tous droits réservés.",
             footRates: "En ligne 25 $/h · En personne 35 $/h",
             studentAdult: "Adulte", studentChild: "Enfant",
             formatOnline: "En ligne", formatInperson: "En personne",
@@ -992,16 +1015,18 @@
         }
 
         function update() {
-          var rate = RATES[state.format];
+          var isGroup = state.format === "group";
+          var rate = RATES[state.format] || 0;
           var total = rate * state.hours;
           hrsOut.textContent = hoursText(state.hours);
+          document.getElementById("hoursField").style.display = isGroup ? "none" : "";
           document.getElementById("sumStudent").textContent = t(state.student === "adult" ? "studentAdult" : "studentChild");
-          document.getElementById("sumFormat").textContent = t(state.format === "online" ? "formatOnline" : "formatInperson");
-          document.getElementById("sumRate").textContent = fmtRate(rate);
-          document.getElementById("sumHours").textContent = hoursText(state.hours);
+          document.getElementById("sumFormat").textContent = isGroup ? t("formatGroup") : t(state.format === "online" ? "formatOnline" : "formatInperson");
+          document.getElementById("sumRate").textContent = isGroup ? t("sumGroupRate") : fmtRate(rate);
+          document.getElementById("sumHours").textContent = isGroup ? t("sumGroupHours") : hoursText(state.hours);
           document.getElementById("sumDate").textContent = fmtDate(dateInput.value);
           document.getElementById("sumTime").textContent = fmtTime(timeInput.value);
-          document.getElementById("sumTotal").textContent = fmtMoney(total);
+          document.getElementById("sumTotal").textContent = isGroup ? t("sumGroupTotal") : fmtMoney(total);
         }
 
         dateInput.addEventListener("change", update);
@@ -1042,19 +1067,30 @@
         function renderConfirm() {
           var b = lastBooking;
           if (!b) return;
+          var isGroup = b.format === "group";
           var firstName = b.name.split(" ")[0];
-          document.getElementById("confirmText").textContent = t("ctTemplate")
-            .replace("{name}", firstName)
-            .replace("{format}", t(b.format === "online" ? "ctFormatOnline" : "ctFormatInperson"))
-            .replace("{who}", t(b.student === "adult" ? "ctWhoAdult" : "ctWhoChild"));
-          document.getElementById("confirmSummary").innerHTML =
+          document.getElementById("confirmText").textContent = isGroup
+            ? t("ctGroupTemplate").replace("{name}", firstName)
+            : t("ctTemplate")
+              .replace("{name}", firstName)
+              .replace("{format}", t(b.format === "online" ? "ctFormatOnline" : "ctFormatInperson"))
+              .replace("{who}", t(b.student === "adult" ? "ctWhoAdult" : "ctWhoChild"));
+          var summaryHtml =
             "<div><strong>" + t("cNameL") + "</strong> " + b.name + "</div>" +
             "<div><strong>" + t("cEmailL") + "</strong> " + b.email + "</div>" +
             "<div><strong>" + t("cStudentL") + "</strong> " + t(b.student === "adult" ? "studentAdult" : "studentChild") + "</div>" +
-            "<div><strong>" + t("cFormatL") + "</strong> " + t(b.format === "online" ? "formatOnline" : "formatInperson") + "</div>" +
-            "<div><strong>" + t("cWhenL") + "</strong> " + fmtDate(b.date) + " " + t("atWord") + " " + fmtTime(b.time) + "</div>" +
-            "<div><strong>" + t("cDurationL") + "</strong> " + hoursText(b.hours) + " " + t("atWord") + " " + fmtRateShort(b.rate) + "</div>" +
-            "<div><strong>" + t("cTotalL") + "</strong> " + fmtMoney(b.total) + "</div>";
+            "<div><strong>" + t("cFormatL") + "</strong> " + (isGroup ? t("formatGroup") : t(b.format === "online" ? "formatOnline" : "formatInperson")) + "</div>" +
+            "<div><strong>" + t("cWhenL") + "</strong> " + fmtDate(b.date) + " " + t("atWord") + " " + fmtTime(b.time) + "</div>";
+          if (isGroup) {
+            summaryHtml +=
+              "<div><strong>" + t("cGroupL") + "</strong> " + t("cGroupVal") + "</div>" +
+              "<div><strong>" + t("cTotalL") + "</strong> " + t("sumGroupTotal") + "</div>";
+          } else {
+            summaryHtml +=
+              "<div><strong>" + t("cDurationL") + "</strong> " + hoursText(b.hours) + " " + t("atWord") + " " + fmtRateShort(b.rate) + "</div>" +
+              "<div><strong>" + t("cTotalL") + "</strong> " + fmtMoney(b.total) + "</div>";
+          }
+          document.getElementById("confirmSummary").innerHTML = summaryHtml;
           var subject = t("mailSubjectPrefix") + b.name;
           var bodyLines = [
             t("mailHeading"),
@@ -1062,13 +1098,22 @@
             t("mailNameL") + b.name,
             t("mailEmailL") + b.email,
             t("mailStudentL") + t(b.student === "adult" ? "studentAdult" : "studentChild"),
-            t("mailFormatL") + t(b.format === "online" ? "formatOnline" : "formatInperson"),
+            t("mailFormatL") + (isGroup ? t("formatGroup") : t(b.format === "online" ? "formatOnline" : "formatInperson")),
             t("mailDateL") + fmtDate(b.date),
-            t("mailTimeL") + fmtTime(b.time),
-            t("mailDurationL") + hoursText(b.hours),
-            t("mailRateL") + fmtRate(b.rate),
-            t("mailTotalL") + fmtMoney(b.total)
+            t("mailTimeL") + fmtTime(b.time)
           ];
+          if (isGroup) {
+            bodyLines.push(
+              t("mailGroupL") + t("mailGroupPeople"),
+              t("mailRateL") + t("mailGroupRate")
+            );
+          } else {
+            bodyLines.push(
+              t("mailDurationL") + hoursText(b.hours),
+              t("mailRateL") + fmtRate(b.rate),
+              t("mailTotalL") + fmtMoney(b.total)
+            );
+          }
           if (b.notes) bodyLines.push("", t("mailNotesPrefix") + b.notes);
           document.getElementById("sendBookingBtn").href =
             "mailto:heavenkeys2022@gmail.com?subject=" + encodeURIComponent(subject) +
@@ -1094,7 +1139,8 @@
           }
           lastProblems = null;
           errorBox.classList.remove("show");
-          var rate = RATES[state.format];
+          var isGroupBooking = state.format === "group";
+          var rate = isGroupBooking ? null : RATES[state.format];
           lastBooking = {
             name: name,
             email: email,
@@ -1104,7 +1150,7 @@
             time: timeInput.value,
             hours: state.hours,
             rate: rate,
-            total: rate * state.hours,
+            total: isGroupBooking ? null : rate * state.hours,
             notes: document.getElementById("bkNotes").value.trim()
           };
           renderConfirm();
