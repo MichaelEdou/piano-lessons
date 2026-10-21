@@ -348,6 +348,44 @@
       .confirm .c-summary div { padding: 3px 0; }
       .confirm .c-summary strong { font-weight: 700; }
 
+      /* ---------- Booking steps, calendar & time slots ---------- */
+      .step { margin-top: 30px; }
+      .step + .step { border-top: 1px solid var(--line); padding-top: 28px; }
+      .step-head { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+      .step-num { width: 32px; height: 32px; flex: none; border-radius: 50%; background: var(--accent); color: #fff6ee; font-weight: 700; font-size: 1rem; display: grid; place-items: center; box-shadow: 0 8px 16px -8px rgba(157, 61, 19, 0.7); }
+      .step-head h4 { margin: 0; font-family: "DM Serif Display", Georgia, serif; font-weight: 400; font-size: 1.35rem; }
+      #submitBtn { margin-top: 32px; }
+      .cal { border: 1px solid var(--line); border-radius: 14px; background: var(--bg); padding: 14px; max-width: 430px; }
+      .cal-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+      .cal-title { font-weight: 700; font-size: 1rem; text-transform: capitalize; }
+      .cal-nav { width: 42px; height: 42px; flex: none; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-size: 1.35rem; line-height: 1; cursor: pointer; display: grid; place-items: center; padding: 0 0 3px; }
+      .cal-nav:hover:not(:disabled) { border-color: var(--accent); color: var(--accent-strong); }
+      .cal-nav:disabled { opacity: 0.3; cursor: not-allowed; }
+      .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+      .cal-dow { text-align: center; font-size: 0.78rem; font-weight: 700; color: var(--ink-faint); padding: 5px 0; }
+      .cal-blank { min-height: 42px; }
+      .cal-day { font: inherit; font-weight: 600; font-size: 0.95rem; min-height: 42px; border-radius: 10px; border: 1px solid transparent; background: transparent; color: var(--ink); cursor: pointer; padding: 0; }
+      .cal-day:hover:not(:disabled) { border-color: var(--accent); color: var(--accent-strong); }
+      .cal-day:disabled { color: var(--ink-faint); opacity: 0.35; cursor: not-allowed; }
+      .cal-day.sel { background: var(--accent); color: #fff6ee; border-color: var(--accent); }
+      .cal-day.sel:hover:not(:disabled) { color: #fff6ee; }
+      .cal-hint { margin: 10px 0 0; font-size: 0.86rem; color: var(--ink-faint); line-height: 1.5; max-width: 430px; }
+      .slot-group-label { font-weight: 700; font-size: 0.9rem; color: var(--ink-soft); margin: 4px 0 9px; }
+      .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+      .chips:last-child { margin-bottom: 0; }
+      .chip { font: inherit; font-weight: 600; font-size: 0.92rem; padding: 10px 15px; min-height: 44px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease; }
+      .chip:hover:not(:disabled) { border-color: var(--accent); color: var(--accent-strong); }
+      .chip.sel { background: var(--panel); color: var(--panel-ink); border-color: var(--panel); }
+      .chip:disabled { opacity: 0.32; cursor: not-allowed; background: var(--surface-2); }
+      @media (min-width: 901px) { .summary { position: sticky; top: 92px; align-self: start; } }
+      .btn.is-disabled { opacity: 0.45; pointer-events: none; }
+      .confirm .step-head { justify-content: center; margin-bottom: 12px; }
+      .confirm .step-head h3 { margin: 0; }
+      .pay-step-copy { max-width: 460px; }
+      .paid-check { display: flex; gap: 11px; align-items: flex-start; justify-content: center; max-width: 440px; margin: 20px auto 0; text-align: left; font-weight: 600; font-size: 0.97rem; cursor: pointer; }
+      .paid-check input { width: 22px; height: 22px; flex: none; margin: 1px 0 0; accent-color: var(--accent); cursor: pointer; }
+      .pay-explain { font-size: 0.9rem; max-width: 440px; }
+
       /* ---------- Footer ---------- */
       footer { position: relative; margin-top: 0; background: var(--green-deep); color: var(--green-ink); padding: 80px 0 34px; }
       footer::before { content: ""; position: absolute; top: 28px; left: 0; right: 0; height: 25px; background: repeating-linear-gradient(to bottom, color-mix(in srgb, var(--green-ink) 20%, transparent) 0, color-mix(in srgb, var(--green-ink) 20%, transparent) 1px, transparent 1px, transparent 6px); pointer-events: none; }
@@ -539,7 +577,7 @@
                 <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span data-i18n="po4">Flexible scheduling, reschedule anytime</span></li>
               </ul>
               <a class="btn ghost" href="#book" data-book data-format="online" data-i18n="pOnlineBtn">Book Online — $25/hr</a>
-              <a class="btn accent pay-btn" href="https://square.link/u/pT4pyJCr" target="_blank" rel="noopener" data-i18n="payOnlineBtn">Book &amp; Pay — CA$25</a>
+              <a class="btn accent pay-btn" href="#book" data-book data-format="online" data-i18n="payOnlineBtn">Book &amp; Pay — CA$25</a>
               <p class="pay-cap" data-i18n="payCap">Secure checkout by Square — pays for 1 hour</p>
             </article>
             <article class="p-card popular reveal">
@@ -555,7 +593,7 @@
                 <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span data-i18n="pi4">Same rate for adults and children</span></li>
               </ul>
               <a class="btn" href="#book" data-book data-format="inperson" data-i18n="pInBtn">Book In-Person — $35/hr</a>
-              <a class="btn pay-btn" href="https://square.link/u/exTk3Fdw" target="_blank" rel="noopener" data-i18n="payInBtn">Book &amp; Pay — CA$35</a>
+              <a class="btn pay-btn" href="#book" data-book data-format="inperson" data-i18n="payInBtn">Book &amp; Pay — CA$35</a>
               <p class="pay-cap" data-i18n="payCap">Secure checkout by Square — pays for 1 hour</p>
             </article>
             <article class="p-card reveal">
@@ -587,60 +625,77 @@
           <div class="booking-box reveal">
             <form class="booking-form" id="bookingForm" novalidate>
               <h3 data-i18n="formTitle">Tell me about your lesson</h3>
-              <p data-i18n-html="formIntro">Fill this in, then send your booking straight to your teacher.</p>
+              <p data-i18n-html="formIntro">Fill this in, pick a day and time, then pay to confirm your booking.</p>
               <p class="avail-note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span data-i18n="availNote">Lessons are available Monday to Friday, 9 AM–4 PM and 7 PM–10 PM. Bookings must be made at least one day ahead — no same-day bookings.</span></p>
               <div class="form-error" id="formError" role="alert"></div>
-              <div class="row2">
+              <div class="step">
+                <div class="step-head"><span class="step-num" aria-hidden="true">1</span><h4 data-i18n="step1Title">Your lesson</h4></div>
                 <div class="field">
-                  <label for="bkName" data-i18n="fName">Your name</label>
-                  <input type="text" id="bkName" name="name" autocomplete="name" placeholder="e.g. Jordan Smith" data-i18n-ph="fNamePh" />
-                </div>
-                <div class="field">
-                  <label for="bkEmail" data-i18n="fEmail">Email</label>
-                  <input type="email" id="bkEmail" name="email" autocomplete="email" placeholder="you@example.com" data-i18n-ph="fEmailPh" />
-                </div>
-              </div>
-              <div class="field">
-                <span class="flabel" id="studentLabel" data-i18n="fStudentQ">Who is the lesson for?</span>
-                <div class="seg" role="group" aria-labelledby="studentLabel" id="studentSeg">
-                  <button type="button" data-value="adult" aria-pressed="true"><span data-i18n="segAdult">Adult</span><span class="sub" data-i18n="segAdultSub">Ages 18+</span></button>
-                  <button type="button" data-value="child" aria-pressed="false"><span data-i18n="segChild">Child</span><span class="sub" data-i18n="segChildSub">Under 18</span></button>
-                </div>
-              </div>
-              <div class="field">
-                <span class="flabel" id="formatLabel" data-i18n="fFormatQ">Lesson format</span>
-                <div class="seg seg-3" role="group" aria-labelledby="formatLabel" id="formatSeg">
-                  <button type="button" data-value="online" aria-pressed="true"><span data-i18n="segOnline">Online</span><span class="sub" data-i18n="segOnlineSub">$25 per hour</span></button>
-                  <button type="button" data-value="inperson" aria-pressed="false"><span data-i18n="segInperson">In-Person</span><span class="sub" data-i18n="segInpersonSub">$35 per hour</span></button>
-                  <button type="button" data-value="group" aria-pressed="false"><span data-i18n="segGroup">Group Package</span><span class="sub" data-i18n="segGroupSub">Up to 5 people · flat rate</span></button>
-                </div>
-              </div>
-              <div class="row2">
-                <div class="field">
-                  <label for="bkDate" data-i18n="fDate">Date</label>
-                  <input type="date" id="bkDate" name="date" />
-                </div>
-                <div class="field">
-                  <label for="bkTime" data-i18n="fTime">Time</label>
-                  <input type="time" id="bkTime" name="time" value="10:00" />
-                </div>
-              </div>
-              <div class="field" id="hoursField">
-                <span class="flabel" data-i18n="fHoursQ">How many hours?</span>
-                <div class="hours-row">
-                  <div class="stepper">
-                    <button type="button" id="hrsMinus" aria-label="One hour less" data-i18n-aria="minusAria">−</button>
-                    <output id="hrsOut" for="hrsMinus hrsPlus">1 hour</output>
-                    <button type="button" id="hrsPlus" aria-label="One hour more" data-i18n-aria="plusAria">+</button>
+                  <span class="flabel" id="studentLabel" data-i18n="fStudentQ">Who is the lesson for?</span>
+                  <div class="seg" role="group" aria-labelledby="studentLabel" id="studentSeg">
+                    <button type="button" data-value="adult" aria-pressed="true"><span data-i18n="segAdult">Adult</span><span class="sub" data-i18n="segAdultSub">Ages 18+</span></button>
+                    <button type="button" data-value="child" aria-pressed="false"><span data-i18n="segChild">Child</span><span class="sub" data-i18n="segChildSub">Under 18</span></button>
                   </div>
-                  <span style="color:var(--ink-faint);font-size:.9rem" data-i18n="hoursNote">Most students book 1 hour at a time.</span>
+                </div>
+                <div class="field">
+                  <span class="flabel" id="formatLabel" data-i18n="fFormatQ">Lesson format</span>
+                  <div class="seg seg-3" role="group" aria-labelledby="formatLabel" id="formatSeg">
+                    <button type="button" data-value="online" aria-pressed="true"><span data-i18n="segOnline">Online</span><span class="sub" data-i18n="segOnlineSub">$25 per hour</span></button>
+                    <button type="button" data-value="inperson" aria-pressed="false"><span data-i18n="segInperson">In-Person</span><span class="sub" data-i18n="segInpersonSub">$35 per hour</span></button>
+                    <button type="button" data-value="group" aria-pressed="false"><span data-i18n="segGroup">Group Package</span><span class="sub" data-i18n="segGroupSub">Up to 5 people · flat rate</span></button>
+                  </div>
+                </div>
+                <div class="field">
+                  <span class="flabel" id="dateLabel" data-i18n="fDate">Date</span>
+                  <div class="cal">
+                    <div class="cal-head">
+                      <button type="button" class="cal-nav" id="calPrev" aria-label="Previous month" data-i18n-aria="calPrevAria">‹</button>
+                      <span class="cal-title" id="calTitle"></span>
+                      <button type="button" class="cal-nav" id="calNext" aria-label="Next month" data-i18n-aria="calNextAria">›</button>
+                    </div>
+                    <div class="cal-grid" id="calGrid" role="group" aria-labelledby="dateLabel"></div>
+                  </div>
+                  <input type="hidden" id="bkDate" name="date" />
+                  <p class="cal-hint" data-i18n="calHint">Greyed-out days are unavailable — lessons run Monday to Friday and must be booked at least a day ahead.</p>
+                </div>
+                <div class="field">
+                  <span class="flabel" id="timeLabel" data-i18n="fTime">Time</span>
+                  <input type="hidden" id="bkTime" name="time" value="10:00" />
+                  <p class="slot-group-label" data-i18n="slotMorning">Morning–Afternoon</p>
+                  <div class="chips" id="chipsMorning" role="group" aria-labelledby="timeLabel"></div>
+                  <p class="slot-group-label" data-i18n="slotEvening">Evening</p>
+                  <div class="chips" id="chipsEvening" role="group" aria-labelledby="timeLabel"></div>
+                </div>
+                <div class="field" id="hoursField">
+                  <span class="flabel" data-i18n="fHoursQ">How many hours?</span>
+                  <div class="hours-row">
+                    <div class="stepper">
+                      <button type="button" id="hrsMinus" aria-label="One hour less" data-i18n-aria="minusAria">−</button>
+                      <output id="hrsOut" for="hrsMinus hrsPlus">1 hour</output>
+                      <button type="button" id="hrsPlus" aria-label="One hour more" data-i18n-aria="plusAria">+</button>
+                    </div>
+                    <span style="color:var(--ink-faint);font-size:.9rem" data-i18n="hoursNote">Most students book 1 hour at a time.</span>
+                  </div>
                 </div>
               </div>
-              <div class="field">
-                <label for="bkNotes" data-i18n-html="fNotes">Anything I should know? <span style="color:var(--ink-faint);font-weight:500">(optional)</span></label>
-                <textarea id="bkNotes" name="notes" placeholder="Your level, goals, or songs you'd love to learn…" data-i18n-ph="fNotesPh"></textarea>
+              <div class="step">
+                <div class="step-head"><span class="step-num" aria-hidden="true">2</span><h4 data-i18n="step2Title">Your details</h4></div>
+                <div class="row2">
+                  <div class="field">
+                    <label for="bkName" data-i18n="fName">Your name</label>
+                    <input type="text" id="bkName" name="name" autocomplete="name" placeholder="e.g. Jordan Smith" data-i18n-ph="fNamePh" />
+                  </div>
+                  <div class="field">
+                    <label for="bkEmail" data-i18n="fEmail">Email</label>
+                    <input type="email" id="bkEmail" name="email" autocomplete="email" placeholder="you@example.com" data-i18n-ph="fEmailPh" />
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="bkNotes" data-i18n-html="fNotes">Anything I should know? <span style="color:var(--ink-faint);font-weight:500">(optional)</span></label>
+                  <textarea id="bkNotes" name="notes" placeholder="Your level, goals, or songs you'd love to learn…" data-i18n-ph="fNotesPh"></textarea>
+                </div>
               </div>
-              <button class="btn accent" type="submit" style="width:100%;padding:15px 24px;font-size:1.02rem" data-i18n="submitBtn">Confirm Booking</button>
+              <button class="btn accent" type="submit" id="submitBtn" style="width:100%;padding:15px 24px;font-size:1.02rem">Continue to Payment</button>
             </form>
             <aside class="summary" aria-live="polite">
               <h4 data-i18n="sumTitle">Your booking summary</h4>
@@ -651,24 +706,38 @@
               <div class="sum-row"><span data-i18n="sumDateL">Date</span><span id="sumDate">—</span></div>
               <div class="sum-row"><span data-i18n="sumTimeL">Time</span><span id="sumTime">10:00 AM</span></div>
               <div class="sum-total"><span class="lbl" data-i18n="sumTotalL">Total</span><span class="val" id="sumTotal">$25</span></div>
-              <p class="sum-note" data-i18n="sumNote">Same simple rate for adults and children. No payment due now — you'll arrange payment with your teacher after booking.</p>
+              <p class="sum-note" id="sumNote">Pay for the first hour at the next step to confirm your booking — any remaining balance is settled with your teacher.</p>
             </aside>
             <div class="confirm" id="confirmPanel">
-              <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></div>
-              <h3 data-i18n="confirmTitle">Almost there — one last step!</h3>
-              <p id="confirmText">Your piano lesson details are ready.</p>
-              <div class="c-summary" id="confirmSummary"></div>
-              <p data-i18n="confirmIntro">Tap the button below to send your booking to your teacher. It opens a ready-to-send email with all your details filled in — just press send in your email app.</p>
-              <a class="btn accent" id="sendBookingBtn" href="mailto:heavenkeys2022@gmail.com" style="margin:18px 0 6px;padding:16px 30px;font-size:1.05rem" data-i18n="sendBtnText">Send Booking</a>
-              <div id="payBlock" style="display:none">
-                <div>
-                  <a class="btn accent" id="payNowBtn" href="#" target="_blank" rel="noopener" style="margin:10px 0 0;padding:16px 30px;font-size:1.05rem">Pay Now with Square</a>
+              <div id="payStepView">
+                <div class="step-head"><span class="step-num" aria-hidden="true">3</span><h3 data-i18n="step3Title">Pay to confirm</h3></div>
+                <p id="confirmText">Your piano lesson details are ready.</p>
+                <div class="c-summary" id="confirmSummary"></div>
+                <div id="payArea">
+                  <p class="pay-step-copy" data-i18n="payStepCopy">Your booking is confirmed once payment is received. Pay for the first hour now — any remaining balance is settled with your teacher.</p>
+                  <div>
+                    <a class="btn accent" id="payNowBtn" href="#" target="_blank" rel="noopener" style="margin:6px 0 0;padding:16px 30px;font-size:1.05rem">Pay with Square</a>
+                  </div>
+                  <label class="paid-check">
+                    <input type="checkbox" id="paidCheck" />
+                    <span data-i18n="paidCheck">I've paid — confirm my booking</span>
+                  </label>
                 </div>
-                <p class="pay-note" id="payNote"></p>
+                <p class="pay-group-note" id="payGroupNote" style="display:none"></p>
+                <p class="pay-explain" id="confirmSendNote" data-i18n="confirmSendNote">This sends your lesson details to your teacher, who matches them with your Square payment.</p>
+                <div>
+                  <a class="btn accent is-disabled" id="confirmBookingBtn" href="mailto:heavenkeys2022@gmail.com" aria-disabled="true" style="margin:8px 0 0;padding:16px 30px;font-size:1.05rem" data-i18n="confirmBtnText">Confirm Booking</a>
+                </div>
+                <div>
+                  <button class="btn ghost" type="button" id="backToForm" style="margin-top:14px" data-i18n="backToForm">Back to the form</button>
+                </div>
               </div>
-              <p class="pay-group-note" id="payGroupNote" style="display:none"></p>
-              <p style="font-size:0.9rem" data-i18n-html="confirmPrefer">Once sent, your teacher will confirm your lesson time shortly.</p>
-              <button class="btn ghost" type="button" id="bookAnother" style="margin-top:14px" data-i18n="bookAnotherBtn">Book another lesson</button>
+              <div id="successView" style="display:none">
+                <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></div>
+                <h3 data-i18n="successTitle">Booking sent!</h3>
+                <p id="successText">Your teacher will confirm by email with your lesson link once your payment is verified.</p>
+                <button class="btn ghost" type="button" id="bookAnother" style="margin-top:14px" data-i18n="bookAnotherBtn">Book another lesson</button>
+              </div>
             </div>
           </div>
         </div>
@@ -778,9 +847,9 @@
             pg4: "Perfect for families, friends, and siblings",
             pGroupBtn: "Book the Group Package",
             bookKicker: "Book a Lesson", bookTitle: "Book Your Lesson",
-            bookLede: "Pick who the lesson is for, choose online, in person, or the group package, and set your date and time. Individual totals are calculated instantly — $25/hour online, $35/hour in person — and group bookings are confirmed at a flat rate with your teacher.",
+            bookLede: "Pick who the lesson is for, choose online, in person, or the group package, and set your date and time. Individual totals are calculated instantly — $25/hour online, $35/hour in person — then you pay the first hour to confirm. Group bookings are confirmed at a flat rate with your teacher.",
             formTitle: "Tell me about your lesson",
-            formIntro: "Fill this in, then send your booking straight to your teacher.",
+            formIntro: "Fill this in, pick a day and time, then pay to confirm your booking.",
             fName: "Your name", fNamePh: "e.g. Jordan Smith",
             fEmail: "Email", fEmailPh: "you@example.com",
             fStudentQ: "Who is the lesson for?",
@@ -792,27 +861,21 @@
             hoursNote: "Most students book 1 hour at a time.",
             fNotes: "Anything I should know? <span style=\"color:var(--ink-faint);font-weight:500\">(optional)</span>",
             fNotesPh: "Your level, goals, or songs you'd love to learn…",
-            submitBtn: "Confirm Booking",
+            submitBtn: "Continue to Payment",
             sumTitle: "Your booking summary",
             sumStudentL: "Student", sumFormatL: "Format", sumRateL: "Rate", sumHoursL: "Duration", sumDateL: "Date", sumTimeL: "Time", sumTotalL: "Total",
-            sumNote: "Same simple rate for adults and children. No payment due now — you'll arrange payment with your teacher after booking.",
-            confirmTitle: "Almost there — one last step!",
-            confirmIntro: "Tap the button below to send your booking to your teacher. It opens a ready-to-send email with all your details filled in — just press send in your email app.",
-            sendBtnText: "Send Booking",
+            sumNote: "Pay for the first hour at the next step to confirm your booking — any remaining balance is settled with your teacher.",
             payOnlineBtn: "Book & Pay — CA$25",
             payInBtn: "Book & Pay — CA$35",
             payCap: "Secure checkout by Square — pays for 1 hour",
-            payNowBtn: "Pay Now with Square",
-            payFirstHour: "This pays for the first hour ({amount}); the remaining balance is settled with the teacher.",
             payGroupNote: "Group Package — flat rate to be confirmed with the teacher when you book.",
-            confirmPrefer: "Once sent, your teacher will confirm your lesson time shortly.",
             bookAnotherBtn: "Book another lesson",
             segGroup: "Group Package", segGroupSub: "Up to 5 people · flat rate",
             formatGroup: "Group Package",
             sumGroupRate: "Flat rate — to be confirmed",
             sumGroupHours: "Not per hour",
             sumGroupTotal: "To be confirmed",
-            ctGroupTemplate: "Thank you, {name}! Your group package booking for up to 5 people is ready to send.",
+            ctGroupTemplate: "Thank you, {name}! Here are the details of your group package booking for up to 5 people.",
             cGroupL: "Group:", cGroupVal: "Up to 5 people · flat rate, not per hour",
             mailGroupL: "Group: ", mailGroupPeople: "Up to 5 people",
             mailGroupRate: "Flat group rate (not per hour) — price to be confirmed with the teacher",
@@ -833,14 +896,29 @@
             errWindow: "Please pick a start time between 9 AM–4 PM or 7 PM–10 PM so the lesson fits before the window ends.",
             errPrefix: "Please add ", errSuffix: " so your teacher can confirm your lesson.",
             atWord: "at",
-            ctTemplate: "Thank you, {name}! Your {format} piano lesson for {who} is ready to send.",
+            ctTemplate: "Thank you, {name}! Here are the details of your {format} piano lesson for {who} — one last step to confirm it.",
             ctFormatOnline: "online", ctFormatInperson: "in-person", ctWhoAdult: "an adult", ctWhoChild: "a child",
             cNameL: "Name:", cEmailL: "Email:", cStudentL: "Student:", cFormatL: "Format:", cWhenL: "When:", cDurationL: "Duration:", cTotalL: "Total:",
             mailSubjectPrefix: "New Piano Lesson Booking — ",
             mailHeading: "New piano lesson booking",
             mailNameL: "Name: ", mailEmailL: "Email: ", mailStudentL: "Student: ", mailFormatL: "Format: ",
             mailDateL: "Date: ", mailTimeL: "Time: ", mailDurationL: "Duration: ", mailRateL: "Rate: ", mailTotalL: "Total: ",
-            mailNotesPrefix: "Notes from student: "
+            mailNotesPrefix: "Notes from student: ",
+            step1Title: "Your lesson", step2Title: "Your details", step3Title: "Pay to confirm",
+            submitBtnGroup: "Continue",
+            slotMorning: "Morning–Afternoon", slotEvening: "Evening",
+            calHint: "Greyed-out days are unavailable — lessons run Monday to Friday and must be booked at least a day ahead.",
+            calPrevAria: "Previous month", calNextAria: "Next month",
+            payStepCopy: "Your booking is confirmed once payment is received. Pay for the first hour now — any remaining balance is settled with your teacher.",
+            paidCheck: "I've paid — confirm my booking",
+            confirmSendNote: "This sends your lesson details to your teacher, who matches them with your Square payment.",
+            confirmBtnText: "Confirm Booking",
+            successTitle: "Booking sent!",
+            successText: "Your teacher will confirm by email with your lesson link once your payment is verified.",
+            successTextGroup: "Your teacher will confirm your group booking by email and confirm the flat-rate price with you.",
+            sumGroupNote: "Flat group rate — the price is confirmed with your teacher when you book.",
+            mailPaidLine: "Payment: Student states payment completed via Square",
+            backToForm: "Back to the form"
           },
           fr: {
             docTitle: "Phinaccords Academy — En ligne 25 $/h · En personne 35 $/h",
@@ -904,9 +982,9 @@
             pg4: "Parfait pour les familles, les amis et les fratries",
             pGroupBtn: "Réserver le forfait de groupe",
             bookKicker: "Réserver une leçon", bookTitle: "Réservez votre leçon",
-            bookLede: "Choisissez pour qui est la leçon, en ligne, en personne ou le forfait de groupe, puis la date et l'heure. Les totaux individuels sont calculés instantanément — 25 $/heure en ligne, 35 $/heure en personne — et les réservations de groupe sont confirmées à un tarif forfaitaire avec votre professeur.",
+            bookLede: "Choisissez pour qui est la leçon, en ligne, en personne ou le forfait de groupe, puis la date et l'heure. Les totaux individuels sont calculés instantanément — 25 $/heure en ligne, 35 $/heure en personne — puis vous payez la première heure pour confirmer. Les réservations de groupe sont confirmées à un tarif forfaitaire avec votre professeur.",
             formTitle: "Parlez-moi de votre leçon",
-            formIntro: "Remplissez ce formulaire, puis envoyez votre réservation directement à votre professeur.",
+            formIntro: "Remplissez ce formulaire, choisissez un jour et une heure, puis payez pour confirmer votre réservation.",
             fName: "Votre nom", fNamePh: "p. ex. Jordan Smith",
             fEmail: "Courriel", fEmailPh: "vous@exemple.com",
             fStudentQ: "Pour qui est la leçon?",
@@ -918,27 +996,21 @@
             hoursNote: "La plupart des élèves réservent 1 heure à la fois.",
             fNotes: "Quelque chose que je devrais savoir? <span style=\"color:var(--ink-faint);font-weight:500\">(facultatif)</span>",
             fNotesPh: "Votre niveau, vos objectifs ou les chansons que vous aimeriez apprendre…",
-            submitBtn: "Confirmer la réservation",
+            submitBtn: "Continuer vers le paiement",
             sumTitle: "Résumé de votre réservation",
             sumStudentL: "Élève", sumFormatL: "Format", sumRateL: "Tarif", sumHoursL: "Durée", sumDateL: "Date", sumTimeL: "Heure", sumTotalL: "Total",
-            sumNote: "Même tarif simple pour les adultes et les enfants. Aucun paiement dû maintenant — vous réglerez le paiement avec votre professeur après la réservation.",
-            confirmTitle: "Presque terminé — une dernière étape!",
-            confirmIntro: "Touchez le bouton ci-dessous pour envoyer votre réservation à votre professeur. Un courriel prêt à envoyer s'ouvrira avec tous vos détails déjà remplis — il ne reste qu'à appuyer sur Envoyer dans votre application de courriel.",
-            sendBtnText: "Envoyer la réservation",
+            sumNote: "Payez la première heure à l'étape suivante pour confirmer votre réservation — tout solde restant est réglé avec votre professeur.",
             payOnlineBtn: "Réserver et payer — 25 $",
             payInBtn: "Réserver et payer — 35 $",
             payCap: "Paiement sécurisé par Square — couvre 1 heure",
-            payNowBtn: "Payer maintenant avec Square",
-            payFirstHour: "Ce paiement couvre la première heure ({amount}); le solde restant est réglé avec le professeur.",
             payGroupNote: "Forfait de groupe — tarif forfaitaire à confirmer avec le professeur lors de la réservation.",
-            confirmPrefer: "Une fois envoyée, votre professeur confirmera l'heure de votre leçon sous peu.",
             bookAnotherBtn: "Réserver une autre leçon",
             segGroup: "Forfait de groupe", segGroupSub: "Jusqu'à 5 personnes · tarif forfaitaire",
             formatGroup: "Forfait de groupe",
             sumGroupRate: "Tarif forfaitaire — à confirmer",
             sumGroupHours: "Pas à l'heure",
             sumGroupTotal: "À confirmer",
-            ctGroupTemplate: "Merci, {name}! Votre réservation du forfait de groupe pour jusqu'à 5 personnes est prête à être envoyée.",
+            ctGroupTemplate: "Merci, {name}! Voici les détails de votre réservation du forfait de groupe pour jusqu'à 5 personnes.",
             cGroupL: "Groupe :", cGroupVal: "Jusqu'à 5 personnes · tarif forfaitaire, pas à l'heure",
             mailGroupL: "Groupe : ", mailGroupPeople: "Jusqu'à 5 personnes",
             mailGroupRate: "Tarif de groupe forfaitaire (pas à l'heure) — prix à confirmer avec le professeur",
@@ -959,14 +1031,29 @@
             errWindow: "Veuillez choisir une heure de début entre 9 h et 16 h ou entre 19 h et 22 h, de façon que le cours se termine avant la fin de la plage.",
             errPrefix: "Veuillez ajouter ", errSuffix: " pour que votre professeur puisse confirmer votre leçon.",
             atWord: "à",
-            ctTemplate: "Merci, {name}! Votre leçon de piano {format} pour {who} est prête à être envoyée.",
+            ctTemplate: "Merci, {name}! Voici les détails de votre leçon de piano {format} pour {who} — une dernière étape pour la confirmer.",
             ctFormatOnline: "en ligne", ctFormatInperson: "en personne", ctWhoAdult: "un adulte", ctWhoChild: "un enfant",
             cNameL: "Nom :", cEmailL: "Courriel :", cStudentL: "Élève :", cFormatL: "Format :", cWhenL: "Quand :", cDurationL: "Durée :", cTotalL: "Total :",
             mailSubjectPrefix: "Nouvelle réservation de leçon de piano — ",
             mailHeading: "Nouvelle réservation de leçon de piano",
             mailNameL: "Nom : ", mailEmailL: "Courriel : ", mailStudentL: "Élève : ", mailFormatL: "Format : ",
             mailDateL: "Date : ", mailTimeL: "Heure : ", mailDurationL: "Durée : ", mailRateL: "Tarif : ", mailTotalL: "Total : ",
-            mailNotesPrefix: "Notes de l'élève : "
+            mailNotesPrefix: "Notes de l'élève : ",
+            step1Title: "Votre leçon", step2Title: "Vos coordonnées", step3Title: "Payez pour confirmer",
+            submitBtnGroup: "Continuer",
+            slotMorning: "Matin–Après-midi", slotEvening: "Soirée",
+            calHint: "Les jours grisés sont indisponibles — les cours ont lieu du lundi au vendredi et doivent être réservés au moins un jour à l'avance.",
+            calPrevAria: "Mois précédent", calNextAria: "Mois suivant",
+            payStepCopy: "Votre réservation est confirmée dès que le paiement est reçu. Payez la première heure maintenant — tout solde restant est réglé avec votre professeur.",
+            paidCheck: "J'ai payé — confirmer ma réservation",
+            confirmSendNote: "Ceci envoie les détails de votre leçon à votre professeur, qui les associe à votre paiement Square.",
+            confirmBtnText: "Confirmer la réservation",
+            successTitle: "Réservation envoyée!",
+            successText: "Votre professeur vous confirmera par courriel avec le lien de votre leçon une fois votre paiement vérifié.",
+            successTextGroup: "Votre professeur confirmera votre réservation de groupe par courriel et vous confirmera le prix forfaitaire.",
+            sumGroupNote: "Tarif de groupe forfaitaire — le prix est confirmé avec votre professeur lors de la réservation.",
+            mailPaidLine: "Paiement : l'élève indique avoir payé via Square",
+            backToForm: "Retour au formulaire"
           }
         };
         var lang = "en";
@@ -1098,6 +1185,9 @@
           var isGroup = state.format === "group";
           var rate = RATES[state.format] || 0;
           var total = rate * state.hours;
+          // A start time that no longer fits the chosen duration is cleared,
+          // so the student picks a slot that works instead.
+          if (timeInput.value && !slotFits(timeToMin(timeInput.value))) timeInput.value = "";
           hrsOut.textContent = hoursText(state.hours);
           document.getElementById("hoursField").style.display = isGroup ? "none" : "";
           document.getElementById("sumStudent").textContent = t(state.student === "adult" ? "studentAdult" : "studentChild");
@@ -1107,6 +1197,10 @@
           document.getElementById("sumDate").textContent = fmtDate(dateInput.value);
           document.getElementById("sumTime").textContent = fmtTime(timeInput.value);
           document.getElementById("sumTotal").textContent = isGroup ? t("sumGroupTotal") : fmtMoney(total);
+          document.getElementById("submitBtn").textContent = isGroup ? t("submitBtnGroup") : t("submitBtn");
+          document.getElementById("sumNote").textContent = isGroup ? t("sumGroupNote") : t("sumNote");
+          renderCalendar();
+          renderChips();
           lastRuleError = scheduleError();
           renderError();
         }
@@ -1171,6 +1265,94 @@
           return "errWindow";
         }
 
+        /* ---------- Date-picker calendar & time-slot chips ---------- */
+        // Unavailable days (today, past days, weekends, beyond ~8 weeks) are
+        // rendered disabled; time chips disable live when the lesson would
+        // not fit inside its availability window.
+        var calCursor = new Date();
+        calCursor.setDate(1);
+        calCursor.setHours(0, 0, 0, 0);
+        if (dateInput.value) {
+          var dp0 = dateInput.value.split("-");
+          calCursor = new Date(Number(dp0[0]), Number(dp0[1]) - 1, 1);
+        }
+        function timeToMin(val) { var p = val.split(":"); return Number(p[0]) * 60 + Number(p[1]); }
+        function slotFits(start) {
+          var dur = state.format === "group" ? 0 : state.hours * 60;
+          for (var i = 0; i < WINDOWS.length; i++) {
+            if (start >= WINDOWS[i][0] && start + dur <= WINDOWS[i][1]) return true;
+          }
+          return false;
+        }
+        function renderCalendar() {
+          var grid = document.getElementById("calGrid");
+          if (!grid) return;
+          var today = new Date(); today.setHours(0, 0, 0, 0);
+          var maxD = new Date(today.getTime() + 56 * 24 * 60 * 60 * 1000);
+          document.getElementById("calTitle").textContent =
+            calCursor.toLocaleDateString(locale(), { month: "long", year: "numeric" });
+          document.getElementById("calPrev").disabled =
+            calCursor <= new Date(today.getFullYear(), today.getMonth(), 1);
+          document.getElementById("calNext").disabled =
+            calCursor >= new Date(maxD.getFullYear(), maxD.getMonth(), 1);
+          var html = "";
+          var monday = new Date(2024, 0, 1); // 2024-01-01 was a Monday
+          for (var i = 0; i < 7; i++) {
+            html += '<span class="cal-dow">' + new Date(monday.getTime() + i * 86400000).toLocaleDateString(locale(), { weekday: "narrow" }) + "</span>";
+          }
+          var year = calCursor.getFullYear(), month = calCursor.getMonth();
+          var lead = (new Date(year, month, 1).getDay() + 6) % 7;
+          var daysInMonth = new Date(year, month + 1, 0).getDate();
+          for (var b = 0; b < lead; b++) html += '<span class="cal-blank"></span>';
+          for (var day = 1; day <= daysInMonth; day++) {
+            var d = new Date(year, month, day);
+            var dis = d <= today || d.getDay() === 0 || d.getDay() === 6 || d > maxD;
+            var sel = iso(d) === dateInput.value;
+            html += '<button type="button" class="cal-day' + (sel ? " sel" : "") + '" data-date="' + iso(d) + '"' +
+              (dis ? " disabled" : "") + (sel ? ' aria-pressed="true"' : "") + ">" + day + "</button>";
+          }
+          grid.innerHTML = html;
+        }
+        function renderChips() {
+          var groups = [["chipsMorning", WINDOWS[0]], ["chipsEvening", WINDOWS[1]]];
+          for (var g = 0; g < groups.length; g++) {
+            var wrap = document.getElementById(groups[g][0]);
+            if (!wrap) return;
+            var w = groups[g][1];
+            var html = "";
+            for (var m = w[0]; m < w[1]; m += 30) {
+              var val = pad(Math.floor(m / 60)) + ":" + pad(m % 60);
+              var dis = !slotFits(m);
+              var sel = timeInput.value === val;
+              html += '<button type="button" class="chip' + (sel ? " sel" : "") + '" data-time="' + val + '"' +
+                (dis ? " disabled" : "") + (sel ? ' aria-pressed="true"' : "") + ">" + fmtTime(val) + "</button>";
+            }
+            wrap.innerHTML = html;
+          }
+        }
+        document.getElementById("calGrid").addEventListener("click", function (e) {
+          var btn = e.target.closest("button.cal-day");
+          if (!btn || btn.disabled) return;
+          dateInput.value = btn.getAttribute("data-date");
+          update();
+        });
+        document.getElementById("calPrev").addEventListener("click", function () {
+          calCursor = new Date(calCursor.getFullYear(), calCursor.getMonth() - 1, 1);
+          renderCalendar();
+        });
+        document.getElementById("calNext").addEventListener("click", function () {
+          calCursor = new Date(calCursor.getFullYear(), calCursor.getMonth() + 1, 1);
+          renderCalendar();
+        });
+        function chipClick(e) {
+          var btn = e.target.closest("button.chip");
+          if (!btn || btn.disabled) return;
+          timeInput.value = btn.getAttribute("data-time");
+          update();
+        }
+        document.getElementById("chipsMorning").addEventListener("click", chipClick);
+        document.getElementById("chipsEvening").addEventListener("click", chipClick);
+
         // Validation error, re-rendered in the current language.
         var form = document.getElementById("bookingForm");
         var errorBox = document.getElementById("formError");
@@ -1188,7 +1370,8 @@
           }
         }
 
-        // Confirmation panel + pre-filled email, rendered in the current language.
+        // Step 3 panel (pay first, then confirm) + pre-filled email,
+        // rendered in the current language.
         function renderConfirm() {
           var b = lastBooking;
           if (!b) return;
@@ -1236,33 +1419,38 @@
             bodyLines.push(
               t("mailDurationL") + hoursText(b.hours),
               t("mailRateL") + fmtRate(b.rate),
-              t("mailTotalL") + fmtMoney(b.total)
+              t("mailTotalL") + fmtMoney(b.total),
+              t("mailPaidLine")
             );
           }
           if (b.notes) bodyLines.push("", t("mailNotesPrefix") + b.notes);
-          document.getElementById("sendBookingBtn").href =
+          document.getElementById("confirmBookingBtn").href =
             "mailto:heavenkeys2022@gmail.com?subject=" + encodeURIComponent(subject) +
             "&body=" + encodeURIComponent(bodyLines.join("\n"));
-          // Square pay button: matches the chosen format; each link pays exactly 1 hour.
-          var payBlock = document.getElementById("payBlock");
+          // Step 3 payment UI: hourly formats pay the first hour via Square
+          // first; the group package has no payment link and confirms directly.
+          var payArea = document.getElementById("payArea");
           var payBtn = document.getElementById("payNowBtn");
-          var payNote = document.getElementById("payNote");
           var payGroupNote = document.getElementById("payGroupNote");
           payGroupNote.textContent = t("payGroupNote");
+          // The "matched with your Square payment" line only applies to paid formats.
+          document.getElementById("confirmSendNote").style.display = isGroup ? "none" : "";
           if (isGroup) {
-            payBlock.style.display = "none";
+            payArea.style.display = "none";
             payGroupNote.style.display = "";
+            setConfirmEnabled(true);
           } else {
             payGroupNote.style.display = "none";
-            payBlock.style.display = "";
-            payBtn.textContent = t("payNowBtn");
+            payArea.style.display = "";
+            payBtn.textContent = lang === "fr"
+              ? "Payer " + b.rate + " $ avec Square"
+              : "Pay CA$" + b.rate + " with Square";
             payBtn.href = b.format === "online"
               ? "https://square.link/u/pT4pyJCr"
               : "https://square.link/u/exTk3Fdw";
-            payNote.textContent = b.hours > 1
-              ? t("payFirstHour").replace("{amount}", fmtMoney(b.rate))
-              : t("payCap");
+            setConfirmEnabled(document.getElementById("paidCheck").checked);
           }
+          document.getElementById("successText").textContent = isGroup ? t("successTextGroup") : t("successText");
         }
 
         // Submit -> confirmation.
@@ -1307,6 +1495,9 @@
             total: isGroupBooking ? null : rate * state.hours,
             notes: document.getElementById("bkNotes").value.trim()
           };
+          document.getElementById("paidCheck").checked = false;
+          document.getElementById("payStepView").style.display = "";
+          document.getElementById("successView").style.display = "none";
           renderConfirm();
           form.style.display = "none";
           document.querySelector(".booking-box .summary").style.display = "none";
@@ -1323,6 +1514,11 @@
           timeInput.value = "10:00";
           dateInput.value = iso(nextBookableDate());
           state = { student: "adult", format: "online", hours: 1 };
+          document.getElementById("paidCheck").checked = false;
+          document.getElementById("payStepView").style.display = "";
+          document.getElementById("successView").style.display = "none";
+          var ndp = dateInput.value.split("-");
+          calCursor = new Date(Number(ndp[0]), Number(ndp[1]) - 1, 1);
           lastBooking = null;
           lastProblems = null;
           lastRuleError = null;
@@ -1330,6 +1526,30 @@
           segSelect(studentSeg, "adult");
           segSelect(formatSeg, "online");
           update();
+        });
+
+        /* ---------- Step 3: pay first, then confirm ---------- */
+        function setConfirmEnabled(enabled) {
+          var btn = document.getElementById("confirmBookingBtn");
+          btn.classList.toggle("is-disabled", !enabled);
+          btn.setAttribute("aria-disabled", enabled ? "false" : "true");
+        }
+        document.getElementById("paidCheck").addEventListener("change", function () {
+          setConfirmEnabled(this.checked);
+        });
+        document.getElementById("confirmBookingBtn").addEventListener("click", function (e) {
+          if (this.classList.contains("is-disabled")) { e.preventDefault(); return; }
+          // The mailto opens the pre-filled booking email; show the success view.
+          document.getElementById("payStepView").style.display = "none";
+          var sv = document.getElementById("successView");
+          sv.style.display = "";
+          sv.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+        document.getElementById("backToForm").addEventListener("click", function () {
+          document.getElementById("confirmPanel").classList.remove("show");
+          form.style.display = "";
+          document.querySelector(".booking-box .summary").style.display = "";
+          form.scrollIntoView({ behavior: "smooth", block: "start" });
         });
 
         // Gentle reveal-on-scroll (styles are disabled under prefers-reduced-motion).
