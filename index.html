@@ -654,12 +654,12 @@
           <div class="sec-head">
             <p class="kicker" data-i18n="bookKicker">Book a Lesson</p>
             <h2 class="title" data-i18n="bookTitle">Book Your Lesson</h2>
-            <p class="lede" data-i18n-html="bookLede">Pick who the lesson is for, choose online or in person, and set your date and time. Your total is calculated instantly — $25/hour online, $35/hour in person — and your booking goes straight to <a href="mailto:heavenkeys2022@gmail.com" style="font-weight:700;color:var(--accent)">heavenkeys2022@gmail.com</a>.</p>
+            <p class="lede" data-i18n-html="bookLede">Pick who the lesson is for, choose online or in person, and set your date and time. Your total is calculated instantly — $25/hour online, $35/hour in person — and your booking goes straight to your teacher.</p>
           </div>
           <div class="booking-box">
             <form class="booking-form" id="bookingForm" novalidate>
               <h3 data-i18n="formTitle">Tell me about your lesson</h3>
-              <p data-i18n-html="formIntro">Fill this in, then send your booking straight to your teacher at <a href="mailto:heavenkeys2022@gmail.com" style="font-weight:700;color:var(--accent)">heavenkeys2022@gmail.com</a>.</p>
+              <p data-i18n-html="formIntro">Fill this in, then send your booking straight to your teacher.</p>
               <div class="form-error" id="formError" role="alert"></div>
               <div class="row2">
                 <div class="field">
@@ -729,8 +729,8 @@
               <p id="confirmText">Your piano lesson details are ready.</p>
               <div class="c-summary" id="confirmSummary"></div>
               <p data-i18n="confirmIntro">Tap the button below to send your booking to your teacher. It opens a ready-to-send email with all your details filled in — just press send in your email app.</p>
-              <a class="btn accent" id="sendBookingBtn" href="mailto:heavenkeys2022@gmail.com" style="margin:18px 0 6px;padding:16px 30px;font-size:1.05rem" data-i18n="sendBtnText">Send booking to heavenkeys2022@gmail.com</a>
-              <p style="font-size:0.9rem" data-i18n-html="confirmPrefer">Prefer to write yourself? Email <a href="mailto:heavenkeys2022@gmail.com" style="font-weight:700;color:var(--accent)">heavenkeys2022@gmail.com</a> anytime.</p>
+              <a class="btn accent" id="sendBookingBtn" href="mailto:heavenkeys2022@gmail.com" style="margin:18px 0 6px;padding:16px 30px;font-size:1.05rem" data-i18n="sendBtnText">Send Booking</a>
+              <p style="font-size:0.9rem" data-i18n-html="confirmPrefer">Once sent, your teacher will confirm your lesson time shortly.</p>
               <button class="btn ghost" type="button" id="bookAnother" style="margin-top:14px" data-i18n="bookAnotherBtn">Book another lesson</button>
             </div>
           </div>
@@ -767,7 +767,7 @@
           </div>
           <div class="col">
             <h4 data-i18n="footContact">Contact &amp; bookings</h4>
-            <a href="mailto:heavenkeys2022@gmail.com">heavenkeys2022@gmail.com</a>
+            <a href="#book" data-i18n="footBook">Book a lesson using the form above</a>
             <p style="margin-top:10px" data-i18n-html="footLines">For adults &amp; children<br />All levels welcome<br />Online &amp; in-person<br />Flexible scheduling</p>
           </div>
         </div>
@@ -868,9 +868,9 @@
             aboutSig: "— Your Piano Teacher", bookFirst: "Book Your First Lesson",
             teacherAlt: "Your piano teacher smiling at the piano",
             bookKicker: "Book a Lesson", bookTitle: "Book Your Lesson",
-            bookLede: "Pick who the lesson is for, choose online or in person, and set your date and time. Your total is calculated instantly — $25/hour online, $35/hour in person — and your booking goes straight to <a href=\"mailto:heavenkeys2022@gmail.com\" style=\"font-weight:700;color:var(--accent)\">heavenkeys2022@gmail.com</a>.",
+            bookLede: "Pick who the lesson is for, choose online or in person, and set your date and time. Your total is calculated instantly — $25/hour online, $35/hour in person — and your booking goes straight to your teacher.",
             formTitle: "Tell me about your lesson",
-            formIntro: "Fill this in, then send your booking straight to your teacher at <a href=\"mailto:heavenkeys2022@gmail.com\" style=\"font-weight:700;color:var(--accent)\">heavenkeys2022@gmail.com</a>.",
+            formIntro: "Fill this in, then send your booking straight to your teacher.",
             fName: "Your name", fNamePh: "e.g. Jordan Smith",
             fEmail: "Email", fEmailPh: "you@example.com",
             fStudentQ: "Who is the lesson for?",
@@ -888,13 +888,14 @@
             sumNote: "Same simple rate for adults and children. No payment due now — you'll arrange payment with your teacher after booking.",
             confirmTitle: "Almost there — one last step!",
             confirmIntro: "Tap the button below to send your booking to your teacher. It opens a ready-to-send email with all your details filled in — just press send in your email app.",
-            sendBtnText: "Send booking to heavenkeys2022@gmail.com",
-            confirmPrefer: "Prefer to write yourself? Email <a href=\"mailto:heavenkeys2022@gmail.com\" style=\"font-weight:700;color:var(--accent)\">heavenkeys2022@gmail.com</a> anytime.",
+            sendBtnText: "Send Booking",
+            confirmPrefer: "Once sent, your teacher will confirm your lesson time shortly.",
             bookAnotherBtn: "Book another lesson",
             footBlurb: "Private 1-on-1 piano lessons for adults and children — online and in person, at a pace that fits your life.",
             footExplore: "Explore",
             footOnline: "Online — $25/hour", footInperson: "In-Person — $35/hour", footPack: "Lesson Pack — 4 lessons",
             footContact: "Contact & bookings",
+            footBook: "Book a lesson using the form above",
             footLines: "For adults &amp; children<br />All levels welcome<br />Online &amp; in-person<br />Flexible scheduling",
             footRights: "© 2026 Piano Lessons. All rights reserved.",
             footRates: "Online $25/hr · In-person $35/hr",
@@ -998,9 +999,9 @@
             aboutSig: "— Votre professeur de piano", bookFirst: "Réservez votre première leçon",
             teacherAlt: "Votre professeur de piano souriant au piano",
             bookKicker: "Réserver une leçon", bookTitle: "Réservez votre leçon",
-            bookLede: "Choisissez pour qui est la leçon, en ligne ou en personne, puis la date et l'heure. Votre total est calculé instantanément — 25 $/heure en ligne, 35 $/heure en personne — et votre réservation est envoyée directement à <a href=\"mailto:heavenkeys2022@gmail.com\" style=\"font-weight:700;color:var(--accent)\">heavenkeys2022@gmail.com</a>.",
+            bookLede: "Choisissez pour qui est la leçon, en ligne ou en personne, puis la date et l'heure. Votre total est calculé instantanément — 25 $/heure en ligne, 35 $/heure en personne — et votre réservation est envoyée directement à votre professeur.",
             formTitle: "Parlez-moi de votre leçon",
-            formIntro: "Remplissez ce formulaire, puis envoyez votre réservation directement à votre professeur à <a href=\"mailto:heavenkeys2022@gmail.com\" style=\"font-weight:700;color:var(--accent)\">heavenkeys2022@gmail.com</a>.",
+            formIntro: "Remplissez ce formulaire, puis envoyez votre réservation directement à votre professeur.",
             fName: "Votre nom", fNamePh: "p. ex. Jordan Smith",
             fEmail: "Courriel", fEmailPh: "vous@exemple.com",
             fStudentQ: "Pour qui est la leçon?",
@@ -1018,13 +1019,14 @@
             sumNote: "Même tarif simple pour les adultes et les enfants. Aucun paiement dû maintenant — vous réglerez le paiement avec votre professeur après la réservation.",
             confirmTitle: "Presque terminé — une dernière étape!",
             confirmIntro: "Touchez le bouton ci-dessous pour envoyer votre réservation à votre professeur. Un courriel prêt à envoyer s'ouvrira avec tous vos détails déjà remplis — il ne reste qu'à appuyer sur Envoyer dans votre application de courriel.",
-            sendBtnText: "Envoyer la réservation à heavenkeys2022@gmail.com",
-            confirmPrefer: "Vous préférez écrire vous-même? Écrivez à <a href=\"mailto:heavenkeys2022@gmail.com\" style=\"font-weight:700;color:var(--accent)\">heavenkeys2022@gmail.com</a> en tout temps.",
+            sendBtnText: "Envoyer la réservation",
+            confirmPrefer: "Une fois envoyée, votre professeur confirmera l'heure de votre leçon sous peu.",
             bookAnotherBtn: "Réserver une autre leçon",
             footBlurb: "Leçons de piano privées individuelles pour adultes et enfants — en ligne et en personne, à un rythme qui s'adapte à votre vie.",
             footExplore: "Explorer",
             footOnline: "En ligne — 25 $/heure", footInperson: "En personne — 35 $/heure", footPack: "Forfait — 4 leçons",
             footContact: "Contact et réservations",
+            footBook: "Réservez une leçon avec le formulaire ci-dessus",
             footLines: "Pour adultes et enfants<br />Tous les niveaux bienvenus<br />En ligne et en personne<br />Horaire flexible",
             footRights: "© 2026 Leçons de piano. Tous droits réservés.",
             footRates: "En ligne 25 $/h · En personne 35 $/h",
