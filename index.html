@@ -21,9 +21,10 @@
         --ink-soft: #4b5a50;
         --ink-faint: #7d8b7e;
         --line: #d5ddcb;
-        --accent: #c2501f;
-        --accent-strong: #9d3d13;
-        --accent-soft: #fbe7da;
+        --accent: #173e31;
+        --accent-strong: #0f2c20;
+        --accent-soft: #e2ecda;
+        --on-accent: #ffffff;
         --green: #173e31;
         --green-deep: #102c22;
         --green-ink: #f0f4ec;
@@ -43,9 +44,10 @@
           --ink-soft: #b6c4b2;
           --ink-faint: #84937f;
           --line: #2c3d2f;
-          --accent: #ec8a58;
-          --accent-strong: #f5ab7f;
-          --accent-soft: #3d2312;
+          --accent: #7fb894;
+          --accent-strong: #a9d4ba;
+          --accent-soft: #1e3325;
+          --on-accent: #0e2117;
           --green: #0f2a20;
           --green-deep: #0a1f17;
           --panel: #e9f1e2;
@@ -98,7 +100,9 @@
         min-height: 48px;
       }
       .btn:hover { transform: translateY(-1px); }
-      .btn.accent { background: var(--accent); border-color: var(--accent); color: #fff6ee; }
+      .btn.accent { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+      header.nav .btn.accent { background: var(--green-ink); border-color: var(--green-ink); color: var(--green); }
+      header.nav .btn.accent:hover { background: #ffffff; border-color: #ffffff; }
       .btn.accent:hover { background: var(--accent-strong); }
       .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
       .btn.small { padding: 10px 20px; min-height: 44px; font-size: 0.93rem; }
@@ -154,7 +158,7 @@
           font-size: 1.12rem; font-weight: 700; text-decoration: none; color: var(--green-ink);
           border-bottom: 1px solid color-mix(in srgb, var(--green-ink) 14%, transparent);
         }
-        .mobile-menu nav a span.arr { color: var(--accent); font-weight: 700; }
+        .mobile-menu nav a span.arr { color: #b9d6c2; font-weight: 700; }
         .mobile-menu .lang-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 16px 4px 0; }
         .mobile-menu .lang-label { font-size: 1rem; font-weight: 700; color: var(--green-ink); }
         .mobile-menu .lang-switch button { min-height: 46px; padding: 10px 22px; font-size: 0.95rem; }
@@ -176,7 +180,7 @@
       .badge .avatars { display: flex; }
       .badge .avatars span {
         width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--surface);
-        display: grid; place-items: center; font-size: 0.6rem; font-weight: 700; color: #fff6ee; margin-left: -7px;
+        display: grid; place-items: center; font-size: 0.6rem; font-weight: 700; color: #ffffff; margin-left: -7px;
       }
       .badge .avatars span:first-child { margin-left: 0; }
       .hero h1 {
@@ -194,7 +198,7 @@
       .hero-img::before { content: ""; position: absolute; z-index: 1; inset: 12px; border: 1.5px solid color-mix(in srgb, var(--accent) 50%, transparent); border-radius: 228px 228px 14px 14px; pointer-events: none; }
       @media (min-width: 1240px) { .hero-img::before { inset: 0; transform: translate(16px, 16px); border-radius: 240px 240px 22px 22px; } }
       .hero-img img { position: relative; width: 100%; height: clamp(280px, 38vw, 500px); object-fit: cover; border-radius: 240px 240px 22px 22px; box-shadow: var(--shadow); }
-      .note-chip { position: absolute; z-index: 2; top: 30px; left: -16px; width: 58px; height: 58px; border-radius: 50%; background: var(--accent); color: #fff6ee; display: grid; place-items: center; box-shadow: 0 14px 28px -12px rgba(157, 61, 19, 0.65); transform: rotate(-8deg); }
+      .note-chip { position: absolute; z-index: 2; top: 30px; left: -16px; width: 58px; height: 58px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; box-shadow: 0 14px 28px -12px rgba(16, 44, 32, 0.5); transform: rotate(-8deg); }
       .note-chip svg { width: 27px; height: 27px; }
       @media (max-width: 560px) { .note-chip { left: 10px; top: 18px; width: 50px; height: 50px; } }
       .rate-card {
@@ -259,7 +263,7 @@
       @media (max-width: 900px) { .p-grid { grid-template-columns: 1fr; } }
       .p-card { background: var(--surface); border: 1px solid var(--line); border-radius: 24px; padding: 34px 30px; display: flex; flex-direction: column; position: relative; box-shadow: var(--shadow-soft); }
       .p-card.popular { background: var(--panel); color: var(--panel-ink); border-color: var(--panel); box-shadow: var(--shadow); }
-      .pop-tag { position: absolute; top: -14px; left: 28px; background: var(--accent); color: #fff6ee; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 14px; border-radius: 999px; white-space: nowrap; box-shadow: 0 8px 18px -8px rgba(157, 61, 19, 0.7); }
+      .pop-tag { position: absolute; top: -14px; left: 28px; background: var(--accent); color: var(--on-accent); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 14px; border-radius: 999px; white-space: nowrap; box-shadow: 0 8px 18px -8px rgba(16, 44, 32, 0.5); }
       .p-card h3 { margin: 0 0 4px; font-family: "DM Serif Display", Georgia, serif; font-weight: 400; font-size: 1.4rem; }
       .p-card .who { color: var(--ink-faint); font-size: 0.92rem; margin: 0 0 20px; }
       .p-card.popular .who { color: color-mix(in srgb, var(--panel-ink) 68%, transparent); }
@@ -278,7 +282,7 @@
       .p-card.popular .pay-cap { color: color-mix(in srgb, var(--panel-ink) 68%, transparent); }
       .pay-note { font-size: 0.9rem; color: var(--ink-soft); max-width: 480px; margin: 10px auto 0; }
       .pay-group-note { font-size: 0.94rem; font-weight: 600; color: var(--ink-soft); max-width: 480px; margin: 10px auto 0; }
-      .p-card.popular .btn { background: var(--accent); border-color: var(--accent); color: #fff6ee; }
+      .p-card.popular .btn { background: var(--panel-ink); border-color: var(--panel-ink); color: var(--green-deep); }
 
       /* ---------- Booking ---------- */
       .booking-box {
@@ -334,8 +338,8 @@
       .sum-total .lbl { font-weight: 700; }
       .sum-total .val { font-size: 2.3rem; font-weight: 700; letter-spacing: -0.02em; }
       .sum-note { font-size: 0.84rem; opacity: 0.68; margin: 10px 0 0; }
-      .form-error { display: none; background: #fde8e0; color: #8c2d0e; border: 1px solid #f3bda6; border-radius: 12px; padding: 12px 14px; font-size: 0.92rem; font-weight: 600; margin-bottom: 18px; }
-      @media (prefers-color-scheme: dark) { .form-error { background: #3d1d10; color: #f5b58f; border-color: #6e3a20; } }
+      .form-error { display: none; background: #e9efe0; color: #33473a; border: 1px solid #b3c49c; border-radius: 12px; padding: 12px 14px; font-size: 0.92rem; font-weight: 600; margin-bottom: 18px; }
+      @media (prefers-color-scheme: dark) { .form-error { background: #24331f; color: #d9e6cb; border-color: #4c6540; } }
       .form-error.show { display: block; }
       .avail-note { display: flex; gap: 10px; align-items: flex-start; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 13px 16px; margin: 20px 0 0; max-width: 640px; font-size: 0.94rem; font-weight: 600; line-height: 1.5; color: var(--ink-soft); }
       .avail-note svg { width: 20px; height: 20px; flex: none; margin-top: 2px; stroke: var(--accent); }
@@ -355,7 +359,7 @@
       .step { margin-top: 30px; }
       .step + .step { border-top: 1px solid var(--line); padding-top: 28px; }
       .step-head { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
-      .step-num { width: 32px; height: 32px; flex: none; border-radius: 50%; background: var(--accent); color: #fff6ee; font-weight: 700; font-size: 1rem; display: grid; place-items: center; box-shadow: 0 8px 16px -8px rgba(157, 61, 19, 0.7); }
+      .step-num { width: 32px; height: 32px; flex: none; border-radius: 50%; background: var(--accent); color: var(--on-accent); font-weight: 700; font-size: 1rem; display: grid; place-items: center; box-shadow: 0 8px 16px -8px rgba(16, 44, 32, 0.5); }
       .step-head h4 { margin: 0; font-family: "DM Serif Display", Georgia, serif; font-weight: 400; font-size: 1.35rem; }
       #submitBtn { margin-top: 32px; }
       .cal { border: 1px solid var(--line); border-radius: 16px; background: var(--surface); padding: 16px; max-width: 430px; box-shadow: var(--shadow-soft); }
@@ -370,22 +374,23 @@
       .cal-day { font: inherit; font-weight: 600; font-size: 0.95rem; min-height: 42px; border-radius: 10px; border: 1px solid transparent; background: transparent; color: var(--ink); cursor: pointer; padding: 0; }
       .cal-day:hover:not(:disabled) { border-color: var(--accent); color: var(--accent-strong); }
       .cal-day:disabled { color: var(--ink-faint); opacity: 0.35; cursor: not-allowed; }
-      .cal-day.sel { background: var(--accent); color: #fff6ee; border-color: var(--accent); }
-      .cal-day.sel:hover:not(:disabled) { color: #fff6ee; }
+      .cal-day.sel { background: var(--green); color: #ffffff; border-color: var(--green); }
+      .cal-day.sel:hover:not(:disabled) { color: #ffffff; }
       .cal-hint { margin: 10px 0 0; font-size: 0.86rem; color: var(--ink-faint); line-height: 1.5; max-width: 430px; }
       .cal-chosen { margin: 14px 0 0; font-weight: 700; font-size: 1rem; color: var(--ink); min-height: 1.5em; }
       .cal-legend { display: flex; gap: 18px; flex-wrap: wrap; margin: 8px 0 0; font-size: 0.85rem; color: var(--ink-soft); font-weight: 600; }
       .cal-legend > span { display: inline-flex; align-items: center; gap: 7px; }
       .cal-legend .sw { width: 16px; height: 16px; border-radius: 5px; flex: none; }
       .cal-legend .sw-grey { background: var(--surface-2); border: 1px solid var(--line); }
-      .cal-legend .sw-orange { background: var(--accent); }
-      .slot-group-label { font-weight: 700; font-size: 0.9rem; color: var(--ink-soft); margin: 4px 0 9px; }
-      .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+      .cal-legend .sw-sel { background: var(--green); }
+      .slot-group-label { font-weight: 700; font-size: 0.95rem; color: var(--ink); margin: 6px 0 10px; }
+      .chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 20px; }
       .chips:last-child { margin-bottom: 0; }
-      .chip { font: inherit; font-weight: 600; font-size: 0.92rem; padding: 10px 15px; min-height: 44px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease; }
-      .chip:hover:not(:disabled) { border-color: var(--accent); color: var(--accent-strong); }
-      .chip.sel { background: var(--panel); color: var(--panel-ink); border-color: var(--panel); }
-      .chip:disabled { opacity: 0.32; cursor: not-allowed; background: var(--surface-2); }
+      @media (max-width: 560px) { .chips { grid-template-columns: repeat(3, 1fr); } }
+      .chip { font: inherit; font-weight: 600; font-size: 1rem; line-height: 1.25; padding: 11px 4px; min-height: 48px; border-radius: 10px; border: 1.5px solid color-mix(in srgb, var(--green) 42%, var(--line)); background: var(--surface); color: var(--ink); cursor: pointer; text-align: center; transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease; }
+      .chip:hover:not(:disabled) { background: var(--surface-2); border-color: var(--green); }
+      .chip.sel { background: var(--green); color: #ffffff; border-color: var(--green); font-weight: 700; }
+      .chip:disabled { opacity: 0.55; cursor: not-allowed; background: var(--surface-2); color: var(--ink-faint); border-color: var(--line); }
       @media (min-width: 901px) { .summary { position: sticky; top: 92px; align-self: start; } }
       .btn.is-disabled { opacity: 0.45; pointer-events: none; }
       .confirm .step-head { justify-content: center; margin-bottom: 12px; }
@@ -423,7 +428,7 @@
         <div class="nav-inner">
           <a class="brand" href="#top">
             <span class="keys" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="3" width="19" height="18" rx="2.5" fill="#fff6ee"/><rect x="6" y="3" width="3" height="10" fill="#173e31"/><rect x="10.5" y="3" width="3" height="10" fill="#173e31"/><rect x="15" y="3" width="3" height="10" fill="#173e31"/></svg>
+              <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="3" width="19" height="18" rx="2.5" fill="#ffffff"/><rect x="6" y="3" width="3" height="10" fill="#173e31"/><rect x="10.5" y="3" width="3" height="10" fill="#173e31"/><rect x="15" y="3" width="3" height="10" fill="#173e31"/></svg>
             </span>
             <span data-i18n="brand">Phinaccords&nbsp;Academy</span>
           </a>
@@ -465,7 +470,7 @@
           <div>
             <span class="badge">
               <span class="avatars" aria-hidden="true">
-                <span style="background:#c2501f">S</span><span style="background:#7c5c2e">M</span><span style="background:#2e6b4f">J</span><span style="background:#8c4a2f">A</span>
+                <span style="background:#173e31">S</span><span style="background:#2e6b4f">M</span><span style="background:#4c7a5d">J</span><span style="background:#75957f">A</span>
               </span>
               <span data-i18n="heroBadge">Trusted by happy learners — adults &amp; kids welcome</span>
             </span>
@@ -627,7 +632,6 @@
             <p class="kicker" data-i18n="bookKicker">Book a Lesson</p>
             <h2 class="title" data-i18n="bookTitle">Book Your Lesson</h2>
             <p class="lede" data-i18n-html="bookLede">Pick who the lesson is for, choose online or in person, and set your date and time. Your total is calculated instantly — $25/hour online, $35/hour in person — and your booking goes straight to your teacher.</p>
-            <p class="avail-note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span data-i18n="availNote">Lessons are available Monday to Friday, 9 AM–4 PM and 7 PM–10 PM. Bookings must be made at least one day ahead — no same-day bookings.</span></p>
           </div>
           <div class="booking-box reveal">
             <form class="booking-form" id="bookingForm" novalidate>
@@ -667,7 +671,7 @@
                   <p class="cal-chosen" id="calChosen" aria-live="polite"></p>
                   <div class="cal-legend">
                     <span><span class="sw sw-grey" aria-hidden="true"></span><span data-i18n="legendUnavail">Unavailable</span></span>
-                    <span><span class="sw sw-orange" aria-hidden="true"></span><span data-i18n="legendSel">Selected</span></span>
+                    <span><span class="sw sw-sel" aria-hidden="true"></span><span data-i18n="legendSel">Selected</span></span>
                   </div>
                   <p class="cal-hint" data-i18n="calHint">Greyed-out days are unavailable — lessons run Monday to Friday and must be booked at least a day ahead.</p>
                 </div>
@@ -759,7 +763,7 @@
           <div class="col">
             <a class="brand" href="#top" style="margin-bottom:12px">
               <span class="keys" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="3" width="19" height="18" rx="2.5" fill="#fff6ee"/><rect x="6" y="3" width="3" height="10" fill="#173e31"/><rect x="10.5" y="3" width="3" height="10" fill="#173e31"/><rect x="15" y="3" width="3" height="10" fill="#173e31"/></svg>
+                <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="3" width="19" height="18" rx="2.5" fill="#ffffff"/><rect x="6" y="3" width="3" height="10" fill="#173e31"/><rect x="10.5" y="3" width="3" height="10" fill="#173e31"/><rect x="15" y="3" width="3" height="10" fill="#173e31"/></svg>
               </span>
               <span data-i18n="brand">Phinaccords&nbsp;Academy</span>
             </a>
@@ -915,7 +919,7 @@
             mailNotesPrefix: "Notes from student: ",
             step1Title: "Your lesson", step2Title: "Your details", step3Title: "Pay to confirm",
             submitBtnGroup: "Continue",
-            slotMorning: "Morning–Afternoon", slotEvening: "Evening",
+            slotMorning: "Morning–Afternoon · 9 AM–4 PM", slotEvening: "Evening · 7 PM–10 PM",
             calHint: "Greyed-out days are unavailable — lessons run Monday to Friday and must be booked at least a day ahead.",
             calPrevAria: "Previous month", calNextAria: "Next month",
             childOnlineNote: "Online lessons are for adults — children learn in person.",
@@ -1050,7 +1054,7 @@
             mailNotesPrefix: "Notes de l'élève : ",
             step1Title: "Votre leçon", step2Title: "Vos coordonnées", step3Title: "Payez pour confirmer",
             submitBtnGroup: "Continuer",
-            slotMorning: "Matin–Après-midi", slotEvening: "Soirée",
+            slotMorning: "Matin–Après-midi · 9 h–16 h", slotEvening: "Soirée · 19 h–22 h",
             calHint: "Les jours grisés sont indisponibles — les cours ont lieu du lundi au vendredi et doivent être réservés au moins un jour à l'avance.",
             calPrevAria: "Mois précédent", calNextAria: "Mois suivant",
             childOnlineNote: "Les cours en ligne sont pour les adultes — les enfants apprennent en personne.",
@@ -1209,6 +1213,13 @@
           d.setHours(Number(p[0]), Number(p[1]), 0, 0);
           return d.toLocaleTimeString(locale(), { hour: "numeric", minute: "2-digit" });
         }
+        function fmtTimeRange(val, hours, isGroup) {
+          if (!val) return "—";
+          if (isGroup) return fmtTime(val);
+          var end = timeToMin(val) + hours * 60;
+          var endVal = pad(Math.floor(end / 60)) + ":" + pad(end % 60);
+          return fmtTime(val) + " – " + fmtTime(endVal);
+        }
 
         function update() {
           enforceFormatRules();
@@ -1225,7 +1236,7 @@
           document.getElementById("sumRate").textContent = isGroup ? t("sumGroupRate") : fmtRate(rate);
           document.getElementById("sumHours").textContent = isGroup ? t("sumGroupHours") : hoursText(state.hours);
           document.getElementById("sumDate").textContent = fmtDate(dateInput.value);
-          document.getElementById("sumTime").textContent = fmtTime(timeInput.value);
+          document.getElementById("sumTime").textContent = fmtTimeRange(timeInput.value, state.hours, isGroup);
           document.getElementById("sumTotal").textContent = isGroup ? t("sumGroupTotal") : fmtMoney(total);
           document.getElementById("submitBtn").textContent = isGroup ? t("submitBtnGroup") : t("submitBtn");
           document.getElementById("sumNote").textContent = isGroup ? t("sumGroupNote") : t("sumNote");
@@ -1420,7 +1431,7 @@
             "<div><strong>" + t("cEmailL") + "</strong> " + b.email + "</div>" +
             "<div><strong>" + t("cStudentL") + "</strong> " + t(b.student === "adult" ? "studentAdult" : "studentChild") + "</div>" +
             "<div><strong>" + t("cFormatL") + "</strong> " + (isGroup ? t("formatGroup") : t(b.format === "online" ? "formatOnline" : "formatInperson")) + "</div>" +
-            "<div><strong>" + t("cWhenL") + "</strong> " + fmtDate(b.date) + " " + t("atWord") + " " + fmtTime(b.time) + "</div>";
+            "<div><strong>" + t("cWhenL") + "</strong> " + fmtDate(b.date) + " " + t("atWord") + " " + fmtTimeRange(b.time, b.hours, isGroup) + "</div>";
           if (isGroup) {
             summaryHtml +=
               "<div><strong>" + t("cGroupL") + "</strong> " + t("cGroupVal") + "</div>" +
