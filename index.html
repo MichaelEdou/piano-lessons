@@ -631,12 +631,12 @@
           <div class="sec-head reveal">
             <p class="kicker" data-i18n="bookKicker">Book a Lesson</p>
             <h2 class="title" data-i18n="bookTitle">Book Your Lesson</h2>
-            <p class="lede" data-i18n-html="bookLede">Pick who the lesson is for, choose online, in person, or the group package, and set your date and time. Individual totals are calculated instantly — $25/hour online, $35/hour in person — then you pay the first hour. Your teacher then verifies and approves your booking, and your confirmation email follows. Group bookings are confirmed at a flat rate with your teacher.</p>
+            <p class="lede" data-i18n-html="bookLede">Pick who the lesson is for, choose online, in person, or the group package, and set your date and time. Individual totals are calculated instantly — $25/hour online, $35/hour in person — then you pay the first hour. Your booking is confirmed automatically once your payment is received, and your confirmation email follows. Group bookings are confirmed at a flat rate with your teacher.</p>
           </div>
           <div class="booking-box reveal">
             <form class="booking-form" id="bookingForm" novalidate>
               <h3 data-i18n="formTitle">Tell me about your lesson</h3>
-              <p data-i18n-html="formIntro">Fill this in, pick a day and time, then pay — after payment, your teacher verifies and approves your booking, and your confirmation email follows.</p>
+              <p data-i18n-html="formIntro">Fill this in, pick a day and time, then pay — once your payment is received, your booking is confirmed automatically and your confirmation email follows.</p>
               <p class="avail-note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span data-i18n="availNote">Lessons are available Monday to Friday, 9 AM–4 PM and 7 PM–10 PM. Bookings must be made at least one day ahead — no same-day bookings.</span></p>
               <div class="form-error" id="formError" role="alert"></div>
               <div class="step">
@@ -723,7 +723,7 @@
               <div class="sum-row"><span data-i18n="sumDateL">Date</span><span id="sumDate">—</span></div>
               <div class="sum-row"><span data-i18n="sumTimeL">Time</span><span id="sumTime">10:00 AM</span></div>
               <div class="sum-total"><span class="lbl" data-i18n="sumTotalL">Total</span><span class="val" id="sumTotal">$25</span></div>
-              <p class="sum-note" id="sumNote">Pay for the first hour at the next step — your teacher then verifies and approves your booking, and your confirmation email follows. Any remaining balance is settled with your teacher.</p>
+              <p class="sum-note" id="sumNote">Pay for the first hour at the next step — your booking is confirmed automatically once your payment is received, and your confirmation email follows. Any remaining balance is settled with your teacher.</p>
             </aside>
             <div class="confirm" id="confirmPanel">
               <div id="payStepView">
@@ -731,7 +731,7 @@
                 <p id="confirmText">Your piano lesson details are ready.</p>
                 <div class="c-summary" id="confirmSummary"></div>
                 <div id="payArea">
-                  <p class="pay-step-copy" data-i18n="payStepCopy">After your payment, your teacher reviews and approves every booking personally. You will receive a confirmation email once your lesson is approved. Pay for the first hour now — any remaining balance is settled with your teacher.</p>
+                  <p class="pay-step-copy" data-i18n="payStepCopy">Your booking is confirmed automatically once your payment is received — your confirmation email with your lesson details follows right away. Pay for the first hour now — any remaining balance is settled with your teacher.</p>
                   <div>
                     <a class="btn accent" id="payNowBtn" href="#" target="_blank" rel="noopener" style="margin:6px 0 0;padding:16px 30px;font-size:1.05rem">Pay with Square</a>
                   </div>
@@ -748,7 +748,7 @@
               <div id="successView" style="display:none">
                 <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></div>
                 <h3 data-i18n="successTitle">Booking sent!</h3>
-                <p id="successText">Booking received! We will verify with your teacher — once your payment is checked and your teacher approves, you will receive a confirmation email with your lesson details (and your meeting link for online lessons).</p>
+                <p id="successText">Booking received! Once your payment is verified, your lesson is confirmed automatically — you will receive a confirmation email with your lesson details (and your meeting link for online lessons).</p>
                 <button class="btn ghost" type="button" id="bookAnother" style="margin-top:14px" data-i18n="bookAnotherBtn">Book another lesson</button>
               </div>
             </div>
@@ -860,9 +860,9 @@
             pg4: "Perfect for families, friends, and siblings",
             pGroupBtn: "Book the Group Package",
             bookKicker: "Book a Lesson", bookTitle: "Book Your Lesson",
-            bookLede: "Pick who the lesson is for, choose online, in person, or the group package, and set your date and time. Individual totals are calculated instantly — $25/hour online, $35/hour in person — then you pay the first hour. Your teacher then verifies and approves your booking, and your confirmation email follows. Group bookings are confirmed at a flat rate with your teacher.",
+            bookLede: "Pick who the lesson is for, choose online, in person, or the group package, and set your date and time. Individual totals are calculated instantly — $25/hour online, $35/hour in person — then you pay the first hour. Your booking is confirmed automatically once your payment is received, and your confirmation email follows. Group bookings are confirmed at a flat rate with your teacher.",
             formTitle: "Tell me about your lesson",
-            formIntro: "Fill this in, pick a day and time, then pay — after payment, your teacher verifies and approves your booking, and your confirmation email follows.",
+            formIntro: "Fill this in, pick a day and time, then pay — once your payment is received, your booking is confirmed automatically and your confirmation email follows.",
             fName: "Your name", fNamePh: "e.g. Jordan Smith",
             fEmail: "Email", fEmailPh: "you@example.com",
             fStudentQ: "Who is the lesson for?",
@@ -877,7 +877,7 @@
             submitBtn: "Continue to Payment",
             sumTitle: "Your booking summary",
             sumStudentL: "Student", sumFormatL: "Format", sumRateL: "Rate", sumHoursL: "Duration", sumDateL: "Date", sumTimeL: "Time", sumTotalL: "Total",
-            sumNote: "Pay for the first hour at the next step — your teacher then verifies and approves your booking, and your confirmation email follows. Any remaining balance is settled with your teacher.",
+            sumNote: "Pay for the first hour at the next step — your booking is confirmed automatically once your payment is received, and your confirmation email follows. Any remaining balance is settled with your teacher.",
             payOnlineBtn: "Book & Pay — CA$25",
             payInBtn: "Book & Pay — CA$35",
             payCap: "Secure checkout by Square — pays for 1 hour",
@@ -924,11 +924,11 @@
             calPrevAria: "Previous month", calNextAria: "Next month",
             childOnlineNote: "Online lessons are for adults — children learn in person.",
             legendUnavail: "Unavailable", legendSel: "Selected",
-            payStepCopy: "After your payment, your teacher reviews and approves every booking personally. You will receive a confirmation email once your lesson is approved. Pay for the first hour now — any remaining balance is settled with your teacher.",
+            payStepCopy: "Your booking is confirmed automatically once your payment is received — your confirmation email with your lesson details follows right away. Pay for the first hour now — any remaining balance is settled with your teacher.",
             confirmSendNote: "This sends your lesson details to your teacher, who matches them with your Square payment.",
             confirmBtnText: "Confirm Booking",
             successTitle: "Booking sent!",
-            successText: "Booking received! We will verify with your teacher — once your payment is checked and your teacher approves, you will receive a confirmation email with your lesson details (and your meeting link for online lessons).",
+            successText: "Booking received! Once your payment is verified, your lesson is confirmed automatically — you will receive a confirmation email with your lesson details (and your meeting link for online lessons).",
             successTextGroup: "Your teacher will confirm your group booking by email and confirm the flat-rate price with you.",
             sumGroupNote: "Flat group rate — the price is confirmed with your teacher when you book.",
             backToForm: "Back to the form"
@@ -995,9 +995,9 @@
             pg4: "Parfait pour les familles, les amis et les fratries",
             pGroupBtn: "Réserver le forfait de groupe",
             bookKicker: "Réserver une leçon", bookTitle: "Réservez votre leçon",
-            bookLede: "Choisissez pour qui est la leçon, en ligne, en personne ou le forfait de groupe, puis la date et l'heure. Les totaux individuels sont calculés instantanément — 25 $/heure en ligne, 35 $/heure en personne — puis vous payez la première heure. Votre professeur vérifie ensuite et approuve votre réservation, et votre courriel de confirmation suit. Les réservations de groupe sont confirmées à un tarif forfaitaire avec votre professeur.",
+            bookLede: "Choisissez pour qui est la leçon, en ligne, en personne ou le forfait de groupe, puis la date et l'heure. Les totaux individuels sont calculés instantanément — 25 $/heure en ligne, 35 $/heure en personne — puis vous payez la première heure. Votre réservation est confirmée automatiquement dès la réception de votre paiement, et votre courriel de confirmation suit. Les réservations de groupe sont confirmées à un tarif forfaitaire avec votre professeur.",
             formTitle: "Parlez-moi de votre leçon",
-            formIntro: "Remplissez ce formulaire, choisissez un jour et une heure, puis payez — après le paiement, votre professeur vérifie et approuve votre réservation, et votre courriel de confirmation suit.",
+            formIntro: "Remplissez ce formulaire, choisissez un jour et une heure, puis payez — dès la réception de votre paiement, votre réservation est confirmée automatiquement et votre courriel de confirmation suit.",
             fName: "Votre nom", fNamePh: "p. ex. Jordan Smith",
             fEmail: "Courriel", fEmailPh: "vous@exemple.com",
             fStudentQ: "Pour qui est la leçon?",
@@ -1012,7 +1012,7 @@
             submitBtn: "Continuer vers le paiement",
             sumTitle: "Résumé de votre réservation",
             sumStudentL: "Élève", sumFormatL: "Format", sumRateL: "Tarif", sumHoursL: "Durée", sumDateL: "Date", sumTimeL: "Heure", sumTotalL: "Total",
-            sumNote: "Payez la première heure à l'étape suivante — votre professeur vérifie ensuite et approuve votre réservation, et votre courriel de confirmation suit. Tout solde restant est réglé avec votre professeur.",
+            sumNote: "Payez la première heure à l'étape suivante — votre réservation est confirmée automatiquement dès la réception de votre paiement, et votre courriel de confirmation suit. Tout solde restant est réglé avec votre professeur.",
             payOnlineBtn: "Réserver et payer — 25 $",
             payInBtn: "Réserver et payer — 35 $",
             payCap: "Paiement sécurisé par Square — couvre 1 heure",
@@ -1059,11 +1059,11 @@
             calPrevAria: "Mois précédent", calNextAria: "Mois suivant",
             childOnlineNote: "Les cours en ligne sont pour les adultes — les enfants apprennent en personne.",
             legendUnavail: "Indisponible", legendSel: "Sélectionné",
-            payStepCopy: "Après votre paiement, votre professeur examine et approuve personnellement chaque réservation. Vous recevrez un courriel de confirmation dès que votre cours sera approuvé. Payez la première heure maintenant — tout solde restant est réglé avec votre professeur.",
+            payStepCopy: "Votre réservation est confirmée automatiquement dès la réception de votre paiement — votre courriel de confirmation avec les détails de votre cours suit aussitôt. Payez la première heure maintenant — tout solde restant est réglé avec votre professeur.",
             confirmSendNote: "Ceci envoie les détails de votre leçon à votre professeur, qui les associe à votre paiement Square.",
             confirmBtnText: "Confirmer la réservation",
             successTitle: "Réservation envoyée!",
-            successText: "Réservation reçue ! Nous allons vérifier auprès de votre professeur — une fois votre paiement vérifié et votre cours approuvé par votre professeur, vous recevrez un courriel de confirmation avec les détails de votre cours (et votre lien de réunion pour les cours en ligne).",
+            successText: "Réservation reçue ! Dès que votre paiement est vérifié, votre cours est confirmé automatiquement — vous recevrez un courriel de confirmation avec les détails de votre cours (et votre lien de réunion pour les cours en ligne).",
             successTextGroup: "Votre professeur confirmera votre réservation de groupe par courriel et vous confirmera le prix forfaitaire.",
             sumGroupNote: "Tarif de groupe forfaitaire — le prix est confirmé avec votre professeur lors de la réservation.",
             backToForm: "Retour au formulaire"
